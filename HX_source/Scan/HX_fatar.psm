@@ -3,16 +3,19 @@
 ; ###########            for Mediatronics pBlazIDE               ###############
 ; ##############################################################################
 
-; Scan-Routine für HX3 mk3, Version für FATARSCAN2
+; Scan-Routine für HX3 mk3, Version für FatarScan2
+; 17.03.2015 #16 Zufälligkeit KeyClick verbessert
+; 07.03.2015 #15 Splitpunkt und Mode an AVR übermitteln per internal MIDI
+; 10.01.2015 Bugfix Split Pedal
 ; 26.03.2014 Kompletter Umbau für FPGA 23032014 und AVR-Firmware 3.5
 ; 06.09.2011 MIDI Thru gefixt
 ; 15.05.2011 Version für Nur-Midi-Empfang
 ; 23.03.2011 MIDI-Empfang OK, key_count-Ausgabe
 
-c_splitpoint      EQU   24                        ; Bass-Split Untermanual, zählt ab key_scanned=0 (24 bei B200 oder 19 bis F#)
+; Je nach Tastaturumfang sind anzupassen:
 c_midi_minofs     EQU   2                         ; MIDI-On-Dynamik-Offset (empirisch ermittelt), 7 für Opto, 2 für Fatar Mx
 c_corevers        EQU   $51                       ; $50=SR4014, $51=Fatar, $52=Opto, $53=MIDI RcvOnly
-c_corerevi        EQU   $10                       ; Revisionsnummer
+c_corerevi        EQU   $16                       ; Revisionsnummer
 
 ; mit Assemblierung DAT-Datei für XMODEM-Upload erstellen
                   MEM   "HX_fatar.mem"
@@ -185,14 +188,18 @@ SPI_PERCTIME      DSIN  $2E
 SPI_PEDALTIME     DSIN  $2F
 
 ; Picoblaze Scratchpad Memory
-s_splitpoint      EQU   0                         ; Tastennummer, selbst ermittelt
 s_splitremap_upper EQU  2                         ; manual_select unterhalb Splitpunkt upper
 s_splitremap_lower EQU  3                         ; manual_select unterhalb Splitpunkt lower
 
 s_transpose       EQU   4
 
 s_split_on        EQU   5                         ; Letzter Split-Zustand
-s_splitmode_old   EQU   6
+
+s_xb2_key         EQU   6                         ; Timer-Daten von XB2-Tastatur
+s_xb2_velo        EQU   7
+
+s_splitpoint      EQU   8                         ; Tastennummer von SPI-AVR
+s_splitmode       EQU   9
 
 ; 10..29 MIDI-Daten für Interpreter/Dispatcher
 s_midi_cmd        EQU   10
@@ -292,6 +299,11 @@ main_loop:
 ; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+                  LOAD  key_scanned, 0            ; Start mit Taste 0
+                  STORE key_scanned, s_keycount_upper
+                  STORE key_scanned, s_keycount_lower
+                  STORE key_scanned, s_pedal_on   ; Speicher für gedrückte Taste
+
 ; für FATAR
                   CALL  auxport_sr_load           ; SR-Daten Pedal übernehmen
                   CALL  fatar_groupreset          ; Reset 4024
@@ -300,6 +312,7 @@ main_loop:
                   LOAD  group_matrix, 0
 
 key_loop: 
+                  CALL  clock_delay_long
                   CALL  get_keystatus_upper
                   CALL  get_keystatus_lower
                   CALL  get_keystatus_pedal
@@ -312,7 +325,6 @@ key_loop:
                   COMP  key_matrix, 8
                   JUMP  NZ, key_loop
 
-                  CALL  midi_dispatch             ; MIDI-Daten empfangen?
                   LOAD  key_matrix, 0
                   CALL  fatar_keyreset            ; Reset 4017
                   CALL  fatar_groupclock
@@ -562,7 +574,7 @@ set_key_pedal:
                   FETCH s0, s_split_on
                   COMP  s0, 0
                   JUMP  Z, set_key_pedal_0        ; ist nicht gesplitted
-                  FETCH s0, s_splitmode_old
+                  FETCH s0, s_splitmode
                   COMP  s0, 1                     ; Lower to Upper
                   JUMP  Z, set_key_pedal_0        ; betrifft nicht Pedal
                   RET   
@@ -575,8 +587,6 @@ set_key_pedal_0:
                   CALL  get_midircv
                   CALL  mididyn_to_s0             ; MIDI-Dynamik übersetzen in key_status
                   OR    key_status, s0
-                  AND   key_status, 1
-
                   LOAD  manual_select, 2          ; 2 = Bass
                   COMP  key_scanned, c_maxbasskeys + 1
                   RET   NC                        ; wenn key_scanned > c_maxbasskeys
@@ -702,42 +712,49 @@ mpx_set_contacts_s0:
 
 ; geändert für neues MPX-RAM ohne Autoinkrement-Timer, 20.03.2014
 
+; ##############################################################################
 ; Hilfsroutinen: Werte in Timer/Scratch-RAM lesen oder schreiben
 ; manual_select = 0 für Upper, manual_select = 1 für Lower Manual
-start_noisetimer_fast: 
-                  LOAD  page_select, c_page_noisetimer
-                  CALL  get_ram
-                  COMP  s0, 0
-                  RET   NZ                        ; wenn bereits gestartet
-                  IN    s0, RND_NUMBER            ; zufällige Länge
-                  AND   s0, 1
-                  FETCH s1, s_clicklen_fast       ; Timer-Startwert
-                  JUMP  start_noisetimer_1
+; ##############################################################################
 
-start_noisetimer: 
+start_noisetimer:
 ; Noise-Timer der aktuellen Taste starten, sofern nicht bereits geschehen
                   LOAD  page_select, c_page_noisetimer
                   CALL  get_ram
                   COMP  s0, 0
                   RET   NZ                        ; wenn bereits gestartet
-                  IN    s0, RND_NUMBER            ; zufällige Länge
-                  AND   s0, 3
-                  FETCH s1, s_clicklen            ; Timer-Startwert
-start_noisetimer_1: 
-                  ADD   s0, s1
+                  IN    s1, RND_NUMBER            ; zufällige Länge
+                  AND   s1, 5                     ; 0, 1, 4 oder 5
+                  FETCH s0, s_clicklen            ; Timer-Startwert
+                  ADD   s0, 3
+                  SUB   s0, s1                    ; um Zufallswert verlängern
+                  JUMP  set_noisetimer
+
+start_noisetimer_fast:
+                  LOAD  page_select, c_page_noisetimer
+                  CALL  get_ram
+                  COMP  s0, 0
+                  RET   NZ                        ; wenn bereits gestartet
+                  IN    s1, RND_NUMBER            ; zufällige Länge
+                  AND   s1, 3                     ; 0 bis 3
+                  FETCH s0, s_clicklen_fast       ; Timer-Startwert
+                  ADD   s0, 1
+                  ADD   s0, s1                    ; um kleinen Zufallswert verkürzen
+
+set_noisetimer:
                   COMP  s0, $80                   ; auf Überlauf checken
-                  JUMP  NC, set_noisetimer        ; wenn größer, gab es keinen Überlauf
+                  JUMP  NC, set_noisetimer_1      ; wenn größer, gab es keinen Überlauf
                   LOAD  s0, $FE
-set_noisetimer: 
+set_noisetimer_1:
                   LOAD  page_select, c_page_noisetimer
                   JUMP  set_ram
 
-reset_noisetimer: 
+reset_noisetimer:
                   LOAD  s0, 0
                   LOAD  page_select, c_page_noisetimer
                   JUMP  set_ram
 
-get_noisetimer: 
+get_noisetimer:
                   LOAD  page_select, c_page_noisetimer
                   JUMP  get_ram
 
@@ -1086,14 +1103,8 @@ midi_activesensing:
                   OUT   s0, MIDI_TX
                   RET   
 
-; ##############################################################################
-; MIDI-Subroutinen für MIDI-Empfang
-; 'ReceiveThru'	,	// MIDI Option 0 - nichts Eigenes senden!
-; 'ReceiveSend'	,	// MIDI Option 1
-; 'RcvSendMerge',	// MIDI Option 2
-; 'RcvSndMgNoCC'	// MIDI Option 3
-; ##############################################################################
-
+; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 mididyn_to_s0: 
 ; für upper, lower und bass: s0 je nach Dynamik setzen auf 1 oder 3
@@ -1108,6 +1119,32 @@ mididyn_to_keystatus_slow:
                   RET   
 
 ; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+inc_keys_upper: 
+; bei gedrückter Taste Anzahl erhöhen
+                  COMP  key_status, 0
+                  RET   Z
+                  FETCH s0, s_keycount_upper      ; gedrückte Tasten zählen
+                  ADD   s0, $01
+                  STORE s0, s_keycount_upper
+                  RET   
+
+inc_keys_lower: 
+; bei gedrückter Taste Anzahl erhöhen
+                  COMP  key_status, 0
+                  RET   Z
+                  FETCH s0, s_keycount_lower      ; gedrückte Tasten zählen
+                  ADD   s0, $01
+                  STORE s0, s_keycount_lower
+                  RET   
+
+; ##############################################################################
+; MIDI-Subroutinen für MIDI-Empfang
+; 'ReceiveThru'	,	// MIDI Option 0 - nichts Eigenes senden!
+; 'ReceiveSend'	,	// MIDI Option 1
+; 'RcvSendMerge',	// MIDI Option 2
+; 'RcvSndMgNoCC'	// MIDI Option 3
+; ##############################################################################
 
 midi_dispatch: 
 ; Dispatcher stellt fest, ob und was es zu tun gibt
@@ -1260,11 +1297,7 @@ midi_pchange:
                   OUT   s0, MIDI_DB1
                   FETCH s0, s_midi_data2
                   OUT   s0, MIDI_DB2
-                  LOAD  s0, 1                     ; pos. Flanke an MIDI-FIFO
-                  OUT   s0, MIDI_STR
-                  LOAD  s0, 0
-                  OUT   s0, MIDI_STR
-                  RET   
+                  JUMP  midi_strobe
 
 allnotesoff_manual: 
 ; feststellen, für welchen Kanal gesendet und alle Tasten löschen
@@ -1285,10 +1318,7 @@ scan_init:
                   OUT   s0, MIDI_DB1
                   LOAD  s0, $AA
                   OUT   s0, MIDI_CMD
-                  LOAD  s0, 1                     ; pos. Flanke an MIDI-FIFO
-                  OUT   s0, MIDI_STR
-                  LOAD  s0, 0
-                  OUT   s0, MIDI_STR
+                  CALL  midi_strobe
                   OUT   s0, SCANPORT
                   OUT   s0, STATUS
                   OUT   s0, MIDI_THRU_ON
@@ -1297,7 +1327,6 @@ scan_init:
                   LOAD  s0, 63
                   STORE s0, s_pedal_lastkey
                   LOAD  s0, 0
-                  OUT   s0, MIDI_STR
                   OUT   s0, RAM_PAGE
                   STORE s0, s_pedal_env_msb
                   STORE s0, s_pedal_env_lsb
@@ -1305,10 +1334,7 @@ scan_init:
                   STORE s0, s_keycount_upper      ; Anzahl gedrückter Tasten
                   STORE s0, s_keycount_lower
                   STORE s0, s_transpose
-                  IN    s0, SPI_SPLITMODE
-                  STORE s0, s_splitmode_old
-                  LOAD  s0, c_splitpoint
-                  STORE s0, s_splitpoint
+
                   CALL  split_off
 
                   LOAD  midi1_rxflag, 0
@@ -1335,16 +1361,14 @@ scan_config:
                   FETCH s1, s_transpose
                   COMP  s0, s1
                   STORE s0, s_transpose
-                  CALL  NZ, allnotesoff
+                  CALL  NZ, allnotesoff           ; Transpose geändert
 
                   IN    s1, SPI_CLICKLEN
                   AND   s1, 15                    ; max. 15 ms
                   LOAD  s0, 255
                   SUB   s0, s1
                   STORE s0, s_clicklen            ; Startwert 1ms-Timer
-                  SR0   s1
-                  SR0   s1
-                  ADD   s0, s1
+                  SR1   s0
                   STORE s0, s_clicklen_fast
 
                   IN    s0, SPI_CLICKLEN
@@ -1372,14 +1396,27 @@ is_not_thru:
                   OUT   s0, MIDI_THRU_ON
 
 ; Split überprüfen. In s0 befindet sich ggf. neue Split-ON/OFF-Einstellung vom Panel
+                  FETCH s0, s_splitpoint
+                  IN    s1, SPI_SPLITPOINT
+                  STORE s1, s_splitpoint
+                  COMP  s0, s1
+                  CALL  NZ, allnotesoff; wenn geändert
+
+                  FETCH s0, s_splitmode
+                  IN    s1, SPI_SPLITMODE
+                  STORE s1, s_splitmode
+                  COMP  s0, s1
+                  CALL  NZ, allnotesoff; wenn geändert
 
                   FETCH s0, s_split_on            ; alter Split-On-Zustand
                   IN    s1, SPI_SPLITON           ; neu von Bedienelement
-                  AND   s1, 1
-                  COMP  s0, s1
+                  AND   s1, $01
                   STORE s1, s_split_on
-                  CALL  NZ, set_splitpoint        ; wenn Split nicht geändert, beibehalten
+                  COMP  s0, s1
+                  JUMP  NZ, set_splitpoint
+; wenn Split nicht geändert, beibehalten
                   RET   
+
 
 ; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -1401,31 +1438,6 @@ scan_wait:
                   STORE s0, s_midi_activesensing
                   COMP  s0, 0
                   CALL  Z, midi_activesensing
-
-                  LOAD  key_scanned, 0            ; Start mit Taste 0
-                  STORE key_scanned, s_keycount_upper
-                  STORE key_scanned, s_keycount_lower
-                  STORE key_scanned, s_pedal_on   ; Speicher für gedrückte Taste
-                  RET   
-
-; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-inc_keys_upper: 
-; bei gedrückter Taste Anzahl erhöhen
-                  COMP  key_status, 0
-                  RET   Z
-                  FETCH s0, s_keycount_upper      ; gedrückte Tasten zählen
-                  ADD   s0, $01
-                  STORE s0, s_keycount_upper
-                  RET   
-
-inc_keys_lower: 
-; bei gedrückter Taste Anzahl erhöhen
-                  COMP  key_status, 0
-                  RET   Z
-                  FETCH s0, s_keycount_lower      ; gedrückte Tasten zählen
-                  ADD   s0, $01
-                  STORE s0, s_keycount_lower
                   RET   
 
 ; ##############################################################################
@@ -1436,76 +1448,103 @@ inc_keys_lower:
 ; ##############################################################################
 
 set_splitpoint: 
-; Split-Funktion wurde seit letztem Durchlauf von OFF auf ON geändert.
                   CALL  allnotesoff
-
                   FETCH s0, s_split_on
-                  COMP  s0, 0
-                  JUMP  Z, split_off
+                  COMP  s0, 0                     ; nun ausgeschaltet?
+                  JUMP  Z, split_off              ; dann Remap off und Ende
 
-; Feststellen, ob Keyboard-Tasten gedrückt wurden, dann diese als
-; Splitpoint nehmen. Falls keine gedrückt, letzten Split
+; Split-Funktion wurde seit letztem Durchlauf von OFF auf ON geändert.
+; Feststellen, ob Keyboard-Tasten gedrückt wurden, dann diese setzen und als
+; Splitpoint an AVR senden.
                   FETCH s0, s_keycount_upper
                   FETCH s1, s_keycount_lower
                   OR    s0, s1
                   COMP  s0, 0
-                  JUMP  NZ, split_custom          ; Tasten gedrückt, neuer Splitmode
+                  JUMP  Z, split_mode_setup       ; keine Tasten gedrückt, alter Splitmode
 
-; gedrückte Taste als Splitpoint. Springt danach zu split_on
-; wenn gar keine Keyboard-Taste gedrückt, weiter mit alten Werten, sofern initialisiert
-                  JUMP  split_restore_old
-
-split_custom: 
+                  LOAD  s0, 0
+                  STORE s0, s_splitmode
                   FETCH s1, s_lastkey_on
-                  STORE s1, s_splitpoint
+                  STORE s1, s_splitpoint          ; 
                   FETCH s0, s_keycount_upper
-                  COMP  s0, 0
-                  JUMP  Z, split_pedal_to_lower   ; Upper 0? Dann Split auf Lower
-                  COMP  s0, 1                     ; Nur eine Taste gedrückt? Dann Lower to Upper
-                  JUMP  Z, split_lower_to_upper   ; Wenn nur eine Taste, Lower to Upper
-                  LOAD  s0, 2                     ; Mehr als eine Taste, Bass to Upper
-                  JUMP  split_pedal_to_upper
+                  AND   s0, 3
+                  COMP  s0, 3
+                  JUMP  NZ, split_store           ; mehr als zwei Tasten?
+                  LOAD  s0, 2
 
-split_restore_old: 
-; 0 = PedalToLower, 1 = LowerToUpper und  2 = PedalToUpper
-                  FETCH s0, s_splitmode_old
-                  COMP  s0, 1
-                  JUMP  Z, split_lower_to_upper
-                  COMP  s0, 2
-                  JUMP  Z, split_pedal_to_upper
-; JUMP  split_pedal_to_lower           ; wenn 0
+split_store: 
+; Anzahl der Tasten Obermanual ist zufällig auch Splitmode
+                  STORE s0, s_splitmode
+; gewünschten Splitmode an AVR senden, über internal MIDI an Controller $70 und $71
+                  LOAD  s0, $B0
+                  OUT   s0, MIDI_CMD
+                  LOAD  s0, $70
+                  OUT   s0, MIDI_DB1
+                  FETCH s0, s_splitmode
+                  OUT   s0, MIDI_DB2
+                  CALL  midi_strobe
 
+                  LOAD  s0, $B0
+                  OUT   s0, MIDI_CMD
+                  LOAD  s0, $71
+                  OUT   s0, MIDI_DB1
+                  FETCH s0, s_splitpoint
+                  OUT   s0, MIDI_DB2
+                  CALL  midi_strobe
+
+; Splitmode einstellen: s_splitremap entsprechend setzen und an AVR senden
 ; Wenn bei der Tastenabfrage key_scanned < Splitpoint,
 ; wird manual_select auf s_splitremap gesetzt
+split_mode_setup: 
+; 0 = PedalToLower, 1 = LowerToUpper und  2 = PedalToUpper
+                  FETCH s0, s_splitmode
+                  COMP  s0, 0
+                  JUMP  Z, split_pedal_to_lower   ; wenn 0
+                  COMP  s0, 1
+                  JUMP  Z, split_lower_to_upper
+                  JUMP  split_pedal_to_upper
+
 split_pedal_to_lower:                             ; split_mode 0
-                  STORE s0, s_splitmode_old
-                  LOAD  s0, 2                     ; Pedal
-                  STORE s0, s_splitremap_lower
-                  LOAD  s0, 0                     ; Upper
-                  STORE s0, s_splitremap_upper
-                  RET   
-split_lower_to_upper:                             ; split_mode 1
-                  STORE s0, s_splitmode_old
-                  LOAD  s0, 2
-                  STORE s0, s_splitremap_lower
-                  LOAD  s0, 1
-                  STORE s0, s_splitremap_upper
-                  RET   
-split_pedal_to_upper:                             ; split_mode 2
-                  STORE s0, s_splitmode_old
-                  LOAD  s0, 1
-                  STORE s0, s_splitremap_lower
-                  LOAD  s0, 2
-                  STORE s0, s_splitremap_upper
-                  RET   
-split_off: 
-                  LOAD  s0, 1
-                  STORE s0, s_splitremap_lower
-                  LOAD  s0, 0
-                  STORE s0, s_splitremap_upper
+                  LOAD  s1, 2                     ; Pedal
+                  STORE s1, s_splitremap_lower
+                  LOAD  s1, 0                     ; Upper
+                  STORE s1, s_splitremap_upper
                   RET   
 
-midi1_receive: 
+split_lower_to_upper:                             ; split_mode 1
+                  LOAD  s1, 2
+                  STORE s1, s_splitremap_lower
+                  LOAD  s1, 1
+                  STORE s1, s_splitremap_upper
+                  RET   
+
+split_pedal_to_upper:                             ; split_mode 2
+                  LOAD  s1, 1
+                  STORE s1, s_splitremap_lower
+                  LOAD  s1, 2
+                  STORE s1, s_splitremap_upper
+                  RET   
+
+split_off: 
+                  CALL  allnotesoff
+                  LOAD  s1, 1
+                  STORE s1, s_splitremap_lower
+                  LOAD  s1, 0
+                  STORE s1, s_splitremap_upper
+                  RET   
+
+
+midi_strobe: 
+                  LOAD  s0, 1                     ; pos. Flanke an MIDI-FIFO
+                  OUT   s0, MIDI_STR
+                  LOAD  s0, 0
+                  OUT   s0, MIDI_STR
+                  RET   
+
+; ##############################################################################
+; ##############################################################################
+
+midi1_receive:
 ; MIDI Daten wurden von Input 1 empfangen
 ; SysCmds ausfiltern, Datenbytes sammeln und Flag setzen wenn vollständig
 ; 'ReceiveThru'	,	// MIDI Option 0 - nichts Eigenes senden!
@@ -1521,19 +1560,27 @@ midi1_receive:
 ; OUT   s0, AUXPORT       ; ##### TEST #####
 
                   IN    s0, MIDI_IN1
-                  COMP  s0, $FE                   ; Active Sensing verwerfen, kann immer kommen
-                  RET   Z
-                  COMP  s0, $F0                   ; Sysex usw. ab $F0 verwerfen
-                  JUMP  NC, midi1_is_syscontrol
+                  COMP  s0, $F0                   ; RealTime ab $F0?
+                  JUMP  C, midi1_is_no_realtime   ; wenn nicht, normal weiter
+                  COMP  s0, $F0                   ; Start of SysEX, Flag setzen
+                  JUMP  Z, midi1_start_sysex
+                  COMP  s0, $F7                   ; End of SysEX, Flag löschen
+                  JUMP  Z, midi1_end_sysex
+; TimeCode piece kann immer kommen, wie SysEx behandeln
+                  COMP  s0, $F1
+                  JUMP  Z, midi1_start_sysex
+; MIDI active sensing, beat clock etc verwerfen
+                  RET
 
+midi1_is_no_realtime:
                   TEST  s0, 128
                   JUMP  Z, midi1_is_databyte
-                  LOAD  midi1_syscmdflag, $00     ; ist kein Active Sensing usw.
+                  LOAD  midi1_syscmdflag, $00     ; SysEx-Mode abschalten
                   LOAD  s1, 0                     ; ist ein neuer (Running) Status
                   STORE s1, s_midi1_counter
                   STORE s0, s_midi1_cmd
-                  RET   
-midi1_is_databyte: 
+                  RET
+midi1_is_databyte:
                   COMP  midi1_syscmdflag, $00
                   RET   NZ
                   FETCH s1, s_midi1_counter
@@ -1545,33 +1592,39 @@ midi1_is_databyte:
 ; Sonderfall Ein-Datenbyte-Befehle Program Change und Channel Pressure behandeln
 ; Datensatz ist mit einem Datenbyte vollständig!
                   FETCH s1, s_midi1_cmd
+                  COMP  s1, $F1                   ; MIDI Timecode piece
+                  JUMP  Z, midi1_is_singledatabyte
                   AND   s1, $F0                   ; Kanal ausmaskieren
                   COMP  s1, $C0                   ; program change
                   JUMP  Z, midi1_is_singledatabyte
                   COMP  s1, $D0                   ; channel pressure
                   JUMP  Z, midi1_is_singledatabyte
 
-midi1_is_first_databyte: 
+midi1_is_first_databyte:
                   STORE s0, s_midi1_data1
-                  RET   
+                  RET
 ; hier landen die Datenbytes von 1-Datenbyte-Befehlen:
-midi1_is_singledatabyte: 
+midi1_is_singledatabyte:
                   STORE s0, s_midi1_data1
-midi1_is_second_databyte: 
+midi1_is_second_databyte:
                   STORE s0, s_midi1_data2
                   FETCH s1, s_midi1_counter
                   STORE s1, s_midi1_len           ; letzte Anzahl empfangener Datenbytes
                   LOAD  s1, 0                     ; Datensatz vollständig
                   STORE s1, s_midi1_counter       ; neue Anzahl empfangener Datenbytes
                   LOAD  midi1_rxflag, $FF         ; jetzt vollständig, Flag setzen
-                  RET   
-midi1_is_syscontrol: 
+                  RET
+
+midi1_start_sysex:
                   LOAD  midi1_syscmdflag, $FF
-                  RET   
+                  RET
+midi1_end_sysex:
+                  LOAD  midi1_syscmdflag, $00
+                  RET
 
 ; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-midi2_receive: 
+midi2_receive:
 ; MIDI Daten wurden von Input 2 empfangen
 ; SysCmds ausfiltern, Datenbytes sammeln und Flag setzen wenn vollständig
 ; 'ReceiveThru'	,	// MIDI Option 0 - nichts Eigenes senden!
@@ -1587,10 +1640,19 @@ midi2_receive:
 ; OUT   s0, AUXPORT       ; ##### TEST #####
 
                   IN    s0, MIDI_IN2
-                  COMP  s0, $FE                   ; Active Sensing verwerfen, kann immer kommen
-                  RET   Z
-                  COMP  s0, $F0                   ; Sysex usw. ab $F0 verwerfen
-                  JUMP  NC, midi2_is_syscontrol
+                  COMP  s0, $F0                   ; RealTime ab $F0?
+                  JUMP  C, midi2_is_no_realtime   ; wenn nicht, normal weiter
+                  COMP  s0, $F0                   ; Start of SysEX, Flag setzen
+                  JUMP  Z, midi2_start_sysex
+                  COMP  s0, $F7                   ; End of SysEX, Flag löschen
+                  JUMP  Z, midi2_end_sysex
+; TimeCode piece kann immer kommen, wie SysEx behandeln
+                  COMP  s0, $F1
+                  JUMP  Z, midi2_start_sysex
+; MIDI active sensing, beat clock etc verwerfen
+                  RET
+
+midi2_is_no_realtime:
 
                   TEST  s0, 128
                   JUMP  Z, midi2_is_databyte
@@ -1598,8 +1660,8 @@ midi2_receive:
                   LOAD  s1, 0                     ; ist ein neuer (Running) Status
                   STORE s1, s_midi2_counter
                   STORE s0, s_midi2_cmd
-                  RET   
-midi2_is_databyte: 
+                  RET
+midi2_is_databyte:
                   COMP  midi2_syscmdflag, $00
                   RET   NZ
                   FETCH s1, s_midi2_counter
@@ -1617,27 +1679,31 @@ midi2_is_databyte:
                   COMP  s1, $D0                   ; channel pressure
                   JUMP  Z, midi2_is_singledatabyte
 
-midi2_is_first_databyte: 
+midi2_is_first_databyte:
                   STORE s0, s_midi2_data1
-                  RET   
+                  RET
 ; hier landen die Datenbytes von 1-Datenbyte-Befehlen:
-midi2_is_singledatabyte: 
+midi2_is_singledatabyte:
                   STORE s0, s_midi2_data1
-midi2_is_second_databyte: 
+midi2_is_second_databyte:
                   STORE s0, s_midi2_data2
                   FETCH s1, s_midi2_counter
                   STORE s1, s_midi2_len           ; Anzahl empfangener Datenbytes
                   LOAD  s1, 0                     ; Datensatz vollständig
                   STORE s1, s_midi2_counter       ; letzte Anzahl empfangener Datenbytes
                   LOAD  midi2_rxflag, $FF         ; jetzt vollständig, Flag setzen
-                  RET   
-midi2_is_syscontrol: 
+                  RET
+
+midi2_start_sysex:
                   LOAD  midi2_syscmdflag, $FF
-                  RET   
+                  RET
+midi2_end_sysex:
+                  LOAD  midi2_syscmdflag, $00
+                  RET
 
 ; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-midi3_receive: 
+midi3_receive:
 ; MIDI Daten wurden von AVR empfangen
 ; vereinfachte Version ohne SysEx-Behandlung
                   IN    s0, MIDI_AVR_STATUS
@@ -1645,18 +1711,18 @@ midi3_receive:
                   COMP  s0, 0                     ; Daten empfangen?
                   RET   Z
 
-                  LOAD  s1, $FA                   ; ##### TEST #####
-                  OUT   s1, AUXPORT               ; Trigger für LA
-                  OUT   s0, AUXPORT               ; ##### TEST #####
+; LOAD  s1, $FA                   ; ##### TEST #####
+; OUT   s1, AUXPORT               ; Trigger für LA
+; OUT   s0, AUXPORT               ; ##### TEST #####
                   IN    s0, MIDI_AVR
-midi3_is_not_thru: 
+midi3_is_not_thru:
                   TEST  s0, 128
                   JUMP  Z, midi3_is_databyte
                   LOAD  s1, 0                     ; ist ein neuer (Running) Status
                   STORE s1, s_midi3_counter
                   STORE s0, s_midi3_cmd
-                  RET   
-midi3_is_databyte: 
+                  RET
+midi3_is_databyte:
                   FETCH s1, s_midi3_counter
                   ADD   s1, 1
                   STORE s1, s_midi3_counter
@@ -1672,23 +1738,23 @@ midi3_is_databyte:
                   COMP  s1, $D0                   ; channel pressure
                   JUMP  Z, midi3_is_singledatabyte
 
-midi3_is_first_databyte: 
+midi3_is_first_databyte:
                   STORE s0, s_midi3_data1
-                  RET   
+                  RET
 ; hier landen die Datenbytes von 1-Datenbyte-Befehlen:
-midi3_is_singledatabyte: 
+midi3_is_singledatabyte:
                   STORE s0, s_midi3_data1
-midi3_is_second_databyte: 
+midi3_is_second_databyte:
                   STORE s0, s_midi3_data2
                   FETCH s1, s_midi3_counter
                   STORE s1, s_midi3_len           ; Anzahl empfangener Datenbytes
                   LOAD  s1, 0                     ; Datensatz vollständig
                   STORE s1, s_midi3_counter       ; letzte Anzahl empfangener Datenbytes
                   LOAD  midi3_rxflag, $FF         ; jetzt vollständig, Flag setzen
-                  RET   
+                  RET
 
 
-any_IRQ: 
+any_IRQ:
 ; IRQ ausgelöst durch kcuart
                   RETI  DISABLE
 
