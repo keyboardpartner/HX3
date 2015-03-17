@@ -1,0 +1,77 @@
+MidiCC=NI B4
+MidiCC=Voce
+MidiCC=Hamichord
+MidiCC=Hammond XK
+MidiCC=Hammond SK
+MidiCC=Custom CC
+
+SplitOpt=PedalToLower
+SplitOpt=LowerToUpper
+SplitOpt=PedalToUpper
+
+ScanBoard=OrganScan61
+ScanBoard=MIDI Input
+ScanBoard=FatarScan
+ScanBoard=Scan16/44
+ScanBoard=Scan16/49
+ScanBoard=Scan16/61
+ScanBoard=HardwareTest
+ScanBoard=OptoScan/XB2
+
+Leakage=Clean
+Leakage=NewOrgan
+Leakage=OldOrgan
+Leakage=SleazyOrgan
+
+MidiOpt=ReceiveThru
+MidiOpt=ReceiveSend
+MidiOpt=RcvSendMerge
+MidiOpt=RcvSndMgNoCC
+
+Jacks=Config A
+Jacks=Config B
+
+OutConfig=Organ/Pedal  L/R
+OutConfig=Pedal/Organ  R/L
+OutConfig=L/R  Organ/Pedal
+OutConfig=R/L  Pedal/Organ
+OutConfig=Organ/L  Pedal/R
+OutConfig=L/Organ  R/Pedal
+OutConfig=Pedal/R  Organ/L
+OutConfig=R/Pedal  L/Organ
+OutConfig=Amp122/Pedal  L/R
+OutConfig=Pedal/Amp122  R/L
+OutConfig=L/R  Amp122/Pedal
+OutConfig=R/L  Pedal/Amp122
+OutConfig=Amp122/L  Pedal/R
+OutConfig=L/Amp122  R/Pedal
+OutConfig=Pedal/R  Amp122/L
+OutConfig=R/Pedal  L/Amp122
+OutConfig=Organ/Pedal  L/R +B
+OutConfig=Pedal/Organ  R/L +B
+OutConfig=L/R  Organ/Pedal +B
+OutConfig=R/L  Pedal/Organ +B
+OutConfig=Organ/L  Pedal/R +B
+OutConfig=L/Organ  R/Pedal +B
+OutConfig=Pedal/R  Organ/L +B
+OutConfig=R/Pedal  L/Organ +B
+OutConfig=Amp122/Pedal L/R +B
+OutConfig=Pedal/Amp122 R/L +B
+OutConfig=L/R Amp122/Pedal +B
+OutConfig=R/L Pedal/Amp122 +B
+OutConfig=Amp122/L Pedal/R +B
+OutConfig=L/Amp122 R/Pedal +B
+OutConfig=Pedal/R Amp122/L +B
+OutConfig=R/Pedal L/Amp122 +B
+
+FoldbackMode=Foldback
+FoldbackMode=Full
+FoldbackMode=Foldb muted
+FoldbackMode=Full muted
+
+VibKnob=V1
+VibKnob=C1
+VibKnob=V2
+VibKnob=C2
+VibKnob=V3
+VibKnob=C3

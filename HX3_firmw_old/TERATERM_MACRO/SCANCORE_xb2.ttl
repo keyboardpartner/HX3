@@ -1,0 +1,36 @@
+; If MACRO is not linked to Tera Term,
+testlink
+save_result=result
+; execute the connect command, use TERATERM.INI params
+if save_result=0 connect ''
+
+; DataFlash-Bereich löschen
+timeout=2
+sendln  'DFS=0!'
+waitln '[OK]'
+sendln  'DFE 1=7'
+waitln '000]'
+
+
+; Core 7 = Opto, hier XB2 Parallel-Midi
+mypath='C:\HOAX\FPGACORES\HX_xb2.dat'
+sendln  'DFX 1=7'
+waitln '[START XMODEM]'
+xmodemsend mypath 1
+
+beep
+sendln  'wen=1'
+mycmd='519=7'
+sendln mycmd
+
+sendln  'DFS=1'
+sendln  '9998'
+sendln  'wen=0'
+pause 2
+
+
+if save_result<>0 end
+disconnect
+closett
+
+end

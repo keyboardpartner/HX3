@@ -1,0 +1,48 @@
+#,Description,Value
+604,"Lvl Tap Main",100
+605,"Lvl Tap Near Cab 4x",80
+606,"Lvl Tap Far",90
+607,"Lvl Input",145
+608,"Lvl Rotor",175
+609,"Throb Frq Horn",40
+610,"Throb Frq Rotor",30
+611,"Crossover Frequ",50
+612,"Allpass Horn Frequ",60
+613,"Initial Room Dly Cab Near",65
+614,"Initial Room Dly Far",125
+616,"LFO Mod Horn Main Left",170
+617,"LFO Mod Horn Main Left",175
+618,"LFO Mod Horn Cab fx4",70
+619,"LFO Mod Horn Refl L Near",150
+620,"LFO Mod Horn Refl R Near",152
+621,"LFO Mod Horn Refl L Far",165
+622,"LFO Mod Horn Refl R Far",160
+623,"LFO Mod Horn Throb L",150
+624,"LFO Mod Horn Throb R",150
+625,"LFO Mod Rotor Main",210
+626,"LFO Mod Rotor Refl",195
+627,"LFO Mod Rotor Throb",225
+632,"LFO Add DlyOfs Horn Main Left",0
+633,"LFO Add DlyOfs Horn Main Left",0
+634,"LFO Add DlyOfs Horn Cab fx4",30
+635,"LFO Add DlyOfs Horn Refl L Near",75
+636,"LFO Add DlyOfs Horn Refl R Near",75
+637,"LFO Add DlyOfs Horn Refl L Far",150
+638,"LFO Add DlyOfs Horn Refl R Far",150
+639,"LFO Add ValOfs Horn Throb L",10
+640,"LFO Add ValOfs Horn Throb R",10
+641,"LFO Add DlyOfs Rotor Main",0
+642,"LFO Add DlyOfs Rotor Refl",155
+643,"LFO Add ValOfs Rotor Throb",15
+648,"LFO PhaseOfs Horn Main Left",110
+649,"LFO PhaseOfs Horn Main Left",150
+650,"LFO PhaseOfs Horn Cab fx4",75
+651,"LFO PhaseOfs Horn Refl L  Near",190
+652,"LFO PhaseOfs Horn Refl R Near",230
+653,"LFO PhaseOfs Horn Refl L Far",30
+654,"LFO PhaseOfs Horn Refl R Far",70
+655,"LFO LevelOfs Horn Throb Left",120
+656,"LFO LevelOfs Horn Throb Right",160
+657,"LFO PhaseOfs Rotor Main",0
+658,"LFO PhaseOfs Rotor Refl",125
+659,"LFO LevelOfs Rotor Throb",65

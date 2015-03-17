@@ -1,0 +1,79 @@
+testlink
+save_result=result
+if save_result=0 connect ''
+
+;Eingabe der HOAX-Seriennummer(n)
+
+sendln '242?'
+waitln '#'
+my_serialnum=inputstr
+strscan my_serialnum '='
+strcopy my_serialnum result+1 99 my_serialnum
+
+serialstr='Your HOAX3 FPGA Serial Number is\n'
+strconcat serialstr my_serialnum
+
+sendln '240?'
+waitln '#'
+my_key=inputstr
+strscan my_key '='
+strcopy my_key result+1 99 my_key
+old_organkey='\n\nYour current ORGAN key is\n'
+strconcat old_organkey my_key
+
+sendln '241?'
+waitln '#'
+my_key=inputstr
+strscan my_key '='
+strcopy my_key result+1 99 my_key
+old_lesliekey='\n\nYour current LESLIE key is\n'
+strconcat old_lesliekey my_key
+
+hint=serialstr
+strconcat hint old_organkey
+strconcat hint '\n\nEnter new ORGAN key:\n(leave blank to skip)'
+strspecial hint hint
+inputbox hint 'Licence Key Entry (Organ)'
+strlen inputstr
+if result=0 goto skip_organ
+sendln 'wen=1!'
+sendln '9950=' inputstr
+:skip_organ
+
+hint=serialstr
+strconcat hint old_lesliekey
+strconcat hint '\n\nEnter new LESLIE key:\n(leave blank to skip)'
+strspecial hint hint
+inputbox hint 'Licence Key Entry (Leslie)'
+strlen inputstr
+if result=0 goto skip_leslie
+sendln 'wen=1!'
+sendln '9951=' inputstr
+:skip_leslie
+
+pause 1
+flushrecv
+sendln '244?'
+; Zeile empfangen und anzeigen
+timeout=2
+waitln '#'
+my_str=inputstr
+strscan my_str '='
+strcopy my_str result+1 1 my_str
+str2int my_val my_str
+if my_val=0 message="0 = No Licence or Wrong Key\n\n"
+if my_val=1 message="1 = Organ Key OK\n\n"
+if my_val=2 message="2 = Leslie Key OK\n\n"
+if my_val=3 message="3 = Organ & Leslie OK\n\n"
+title="Update Information"
+strspecial hint 'Your updated licence is\n\n'
+strspecial message message
+strconcat hint message
+
+messagebox hint "Licence Information"
+
+if save_result<>0 end
+pause 2
+disconnect
+closett
+end

@@ -1,0 +1,1 @@
+avrdude -C "avrdude.conf" -pm644p -cstk500v1 -P COM%1 -b57600 -U flash:w:"HX3_repair.hex":i -U eeprom:w:"HX3_repair.eep":i
