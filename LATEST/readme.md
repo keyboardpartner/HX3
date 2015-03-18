@@ -3,14 +3,16 @@ HX3 Latest Firmware
 
 <b>Working releases for update with HX3 Remote application</b>
 
-Copy and unzip whole contents of this repo (full download link: https://github.com/heise/HOAX/archive/master.zip) to a new 
-folder on your hard disk, for example E:\HX3\LATEST\. See 
-http://wiki.keyboardpartner.de/index.php?title=HX3_Remote/Update_Application for details un update procedure. 
+Copy and unzip single ZIP files or whole contents of this repo (full download link: 
+https://github.com/heise/HOAX/archive/master.zip) to a new folder on your hard disk, for example E:\HX3\LATEST\. See 
+http://wiki.keyboardpartner.de/index.php?title=HX3_Remote/Update_Application for details un update procedure. From
+03/2015, ZIP files will contain all necessary files (including FPGA, AVR and ScanCores) plus appropriate HX3 Remote for 
+mk3 as well as mk3 boards.
 
 ### Last Build
 
-* HX3 Remote: #3.72	.exe for Windows XP and up
-* AVR:  #3.721      .hex and .eep files, latest firmware for AVR controller
+* HX3 Remote: #3.74	.exe for Windows XP and up
+* AVR:  #3.74       .hex and .eep files, latest firmware for AVR controller
 * FPGA: #09012015   .bit configuration file for FPGA update
 * SCAN: #$14        .dat ScanCore files
 
@@ -38,8 +40,17 @@ factory programming. These jumpers are only required for updating the reverb DSP
 
 ### Changelog
 
+<b>03/10/2015</b> Firmware #3.74, FPGA #1003015, HX3 Remote #3.74, Scan Rev. #16
+
+* Common Presets save current keyboard split mode and split point
+* Binary combinations of Common Presets allowed (pressing two or more preset buttons at one time)
+* 4 TG capacitor sets from 1955 to 1972 plus "Recapped" (more aggressive)
+
+* Not fixed yet: Display of output configurations A/B may be erraneous
+
 <b>01/10/2015</b> Firmware #3.72, FPGA #09012015, HX3 Remote #3.7, Scan Rev. #14
 
+* Some changes in Hammond MIDI CC set for XK3c (relocated reverb and lower vibrato ON buttons), see HX3 Expander User Manual (directory DOCS_PDF) for details.
 * Fixed Bug in ScanCores OrganScan61 and Strip16, Bass Split was not working
 * Fixed small bug in percussion drawbar muting (#3.721)
 * Fixed bug in common presets assignment
