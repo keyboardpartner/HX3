@@ -25,7 +25,8 @@ mk3 as well as mk3 boards.
 <b>03/10/2015</b> Firmware #3.80, FPGA #1003015, HX3 Remote #3.80, Scan Rev. #16
 
 * Working copy for evaluation - not final!
-* Loadable capacitor sets, to be used with HX3 Tapering application
+* Editor for capacitor sets and tapering schemes (HX3_tapering.exe)
+* Loadable capacitor sets (taper_levelsX.dat), upload by HX3 Remote
 * Common Presets save current keyboard split mode and split point
 * Binary combinations of Common Presets allowed (pressing two or more preset buttons at one time)
 * 4 TG capacitor sets from 1955 to 1972 plus "Recapped" (more aggressive)
