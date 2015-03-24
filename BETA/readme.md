@@ -15,20 +15,22 @@ mk3 as well as mk3 boards.
 
 * HX3 Remote: #3.80	.exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
-* AVR:  #3.80       .hex and .eep files, latest firmware for AVR controller
-* FPGA: #09012015   .bit configuration file for FPGA update
+* AVR:  #3.801      .hex and .eep files, latest firmware for AVR controller
+* FPGA: #24032015   .bit configuration file for FPGA update
 * SCAN: #$16        .dat ScanCore files
 
 
 ### Changelog
 
-<b>03/10/2015</b> Firmware #3.80, FPGA #1003015, HX3 Remote #3.80, Scan Rev. #16
+<b>03/10/2015</b> Firmware #3.801, FPGA #24032015, HX3 Remote #3.80, Scan Rev. #16
 
 * Working copy for evaluation - not final!
+* Complete rework of AO28 amp and tapering
 * Editor for capacitor sets and tapering schemes (HX3_tapering.exe)
 * Loadable capacitor sets (taper_levelsX.dat), upload by HX3 Remote
 * Common Presets save current keyboard split mode and split point
 * Binary combinations of Common Presets allowed (pressing two or more preset buttons at one time)
 * 4 TG capacitor sets from 1955 to 1972 plus "Recapped" (more aggressive)
 * Scan Cores "SysEx" and "MIDI Timing" bugs fixed
+* Pedal foldback bug fixed, new pedal sound mix
 
