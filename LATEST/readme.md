@@ -9,7 +9,7 @@ http://wiki.keyboardpartner.de/index.php?title=HX3_Remote/Update_Application for
 03/2015, ZIP files will contain all necessary files (including FPGA, AVR and ScanCores) plus appropriate HX3 Remote for 
 mk3 as well as mk3 boards.
 
-Update procedure:
+### Update Procedure
 
 * Download ZIP package, unzip to new local folder. Use only files/applications contained in this folder.
 * Start HX3 Remote and connect. 
