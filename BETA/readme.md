@@ -9,9 +9,9 @@ Copy and unzip single ZIP files or whole contents of this repo (full download li
 https://github.com/heise/HOAX/archive/master.zip) to a new folder on your hard disk, for example E:\HX3\LATEST\. See 
 http://wiki.keyboardpartner.de/index.php?title=HX3_Remote/Update_Application for details un update procedure. From
 03/2015, ZIP files will contain all necessary files (including FPGA, AVR and ScanCores) plus appropriate HX3 Remote for 
-mk3 as well as mk3 boards.
+mk2 as well as mk3 boards. Some beta releases will be mk3 only at first publishing.
 
-Update procedure:
+### Update Procedure
 
 * Download ZIP #3.80, unzip to new folder. Use only files/applications contained.
 * Start HX3 Remote and connect. 
