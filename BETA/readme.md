@@ -11,6 +11,16 @@ http://wiki.keyboardpartner.de/index.php?title=HX3_Remote/Update_Application for
 03/2015, ZIP files will contain all necessary files (including FPGA, AVR and ScanCores) plus appropriate HX3 Remote for 
 mk3 as well as mk3 boards.
 
+Update procedure:
+
+* Download ZIP #3.80, unzip to new folder. Use only files/applications contained.
+* Start HX3 Remote and connect. 
+* Click "Update AVR" and select appropriate HEX file. After "Refresh Info" new AVR Version should be displayed.
+* Click "Update FPGA" and select new FPGA_xxxxxx.bit file. This also uploads all scan cores and TG taper_level files.
+* Set appropiate scan core and options near "Write Basics" button.
+* Click "Write Basics".
+* Check serials/licences, user and FW information after "Refresh Info". Done.
+
 ### Last Build
 
 * HX3 Remote: #3.802.exe for Windows XP and up
