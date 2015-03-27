@@ -43,10 +43,10 @@ HX3 is a full-featured Hammond clone module with physical modelled tone generati
 
 ### Update Procedure
 
-* Download ZIP #3.80, unzip to new folder. Use only files/applications contained.
+* Download ZIP archive, unzip to new folder. Use only files/applications contained.
 * Start HX3 Remote and connect. 
 * Click "Update AVR" and select appropriate HEX file. After "Refresh Info" new AVR Version should be displayed.
-* Click "Update FPGA" and select new FPGA_xxxxxx.bit file. This also uploads all scan cores and TG taper_level files.
+* Click "Update FPGA" and select new FPGA_xxxxxx.bit file. This also uploads all scan cores (and TG taper_level files on FW 3.8 and up).
 * Set appropiate scan core and options near "Write Basics" button.
 * Click "Write Basics".
 * Check serials/licences, user and FW information after "Refresh Info". Done.
