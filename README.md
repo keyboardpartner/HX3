@@ -47,19 +47,19 @@ http://wiki.keyboardpartner.de/index.php?title=HX3_Remote/Update_Application for
 
 FPGA configuration and scan cores may be uploaded by provided HX3 Remote application. 
 
-### directories
+### Directories
 
 * <b>LATEST</b>                    last firmware revisions and FPGA configurations, testing only<br>
 * <b>DOCS_PDF</b>                  Syntax table for HX3 COM port, MIDI tables etc. <br>
 * <b>FPGACORES</b>                 FPGA configuration, reverb firmware and keyboard scan cores for upload with TeraTerm macro<br>
-* <b>PLATINEN</b>                  schematics, mechanical drawings, board and componentlayouts<br>
-* <b>TERATERM_MACRO</b>            FPGA and scan core pdate macros for terminal emulator TeraTerm 4.7x (Windows)<br>
+* <b>PLATINEN</b>                  PCB schematics, mechanical drawings, board and component layouts<br>
 * <b>FOR_OEM</b>                   contains all flash files as above, but with built-in bootloader (Arduino/AVRdude compatible). Contains also:
 <b>ATmegaBOOT_xx8.c</b> and <b>Makefile</b>, only needed for re-compilation of bootloaders with WinAVR<br>
 
 ### Update Procedure
 
-* Download single ZIP archive, unzip to new folder. Use only files/applications contained.
+* Download single ZIP archive in LATEST or BETA directory
+* Unzip to new folder. Use only files/applications contained.
 * Start HX3 Remote and connect. 
 * Click "Update AVR" and select appropriate HEX file. After "Refresh Info" new AVR Version should be displayed.
 * Click "Update FPGA" and select new FPGA_xxxxxx.bit file. This also uploads all scan cores (and TG taper_level files on FW 3.8 and up).
