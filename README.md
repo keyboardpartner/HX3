@@ -41,16 +41,6 @@ HX3 Firmware Installation (english)
 HX3 is a full-featured Hammond clone module with physical modelled tone generation from KeyboardPartner 
 (http://shop.keyboardpartner.de). Please find here all documentation, schematics, drawings and firmware/configuration updates.
 
-### Update Procedure
-
-* Download ZIP archive, unzip to new folder. Use only files/applications contained.
-* Start HX3 Remote and connect. 
-* Click "Update AVR" and select appropriate HEX file. After "Refresh Info" new AVR Version should be displayed.
-* Click "Update FPGA" and select new FPGA_xxxxxx.bit file. This also uploads all scan cores (and TG taper_level files on FW 3.8 and up).
-* Set appropiate scan core and options near "Write Basics" button.
-* Click "Write Basics".
-* Check serials/licences, user and FW information after "Refresh Info". Done.
-
 Copy and unzip whole contents of this repo (full download link: https://github.com/heise/HOAX/archive/master.zip) to a new 
 folder on your hard disk, for example E:\HX3\LATEST\. See 
 http://wiki.keyboardpartner.de/index.php?title=HX3_Remote/Update_Application for details un update procedure. 
@@ -66,6 +56,16 @@ FPGA configuration and scan cores may be uploaded by provided HX3 Remote applica
 * <b>TERATERM_MACRO</b>            FPGA and scan core pdate macros for terminal emulator TeraTerm 4.7x (Windows)<br>
 * <b>FOR_OEM</b>                   contains all flash files as above, but with built-in bootloader (Arduino/AVRdude compatible). Contains also:
 <b>ATmegaBOOT_xx8.c</b> and <b>Makefile</b>, only needed for re-compilation of bootloaders with WinAVR<br>
+
+### Update Procedure
+
+* Download single ZIP archive, unzip to new folder. Use only files/applications contained.
+* Start HX3 Remote and connect. 
+* Click "Update AVR" and select appropriate HEX file. After "Refresh Info" new AVR Version should be displayed.
+* Click "Update FPGA" and select new FPGA_xxxxxx.bit file. This also uploads all scan cores (and TG taper_level files on FW 3.8 and up).
+* Set appropiate scan core and options near "Write Basics" button.
+* Click "Write Basics".
+* Check serials/licences, user and FW information after "Refresh Info". Done.
 
 AdaBoot by Adafruit, modified for ATmega644P(A)06/2012 by Carsten Meyer, cm@ct.de
 
