@@ -23,17 +23,19 @@ mk2 as well as mk3 boards. Some beta releases will be mk3 only at first publishi
 
 ### Last Build
 
-* HX3 Remote: #3.802.exe for Windows XP and up
+* HX3 Remote: #3.80 .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
-* AVR:  #3.801      .hex and .eep files, latest firmware for AVR controller
+* AVR:  #3.802      .hex and .eep files, latest firmware for AVR controller
 * FPGA: #24032015   .bit configuration file for FPGA update
 * SCAN: #$16        .dat ScanCore files
 
 
 ### Changelog
 
-<b>03/26/2015</b> Firmware #3.802, FPGA #24032015, HX3 Remote #3.80, Scan Rev. #16
+<b>03/27/2015</b> Firmware #3.802, FPGA #24032015, HX3 Remote #3.80, Scan Rev. #16
 
+* Updated HX3_tapering.exe with better user interface
+* Slightly changed bass pedal tapering
 * Fixed Tone pot overflow bug
 * Deleted obsolete Swell TrimCap param 483 in HX3 Remote
 
