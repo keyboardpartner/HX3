@@ -41,6 +41,16 @@ HX3 Firmware Installation (english)
 HX3 is a full-featured Hammond clone module with physical modelled tone generation from KeyboardPartner 
 (http://shop.keyboardpartner.de). Please find here all documentation, schematics, drawings and firmware/configuration updates.
 
+### Update Procedure
+
+* Download ZIP #3.80, unzip to new folder. Use only files/applications contained.
+* Start HX3 Remote and connect. 
+* Click "Update AVR" and select appropriate HEX file. After "Refresh Info" new AVR Version should be displayed.
+* Click "Update FPGA" and select new FPGA_xxxxxx.bit file. This also uploads all scan cores and TG taper_level files.
+* Set appropiate scan core and options near "Write Basics" button.
+* Click "Write Basics".
+* Check serials/licences, user and FW information after "Refresh Info". Done.
+
 Copy and unzip whole contents of this repo (full download link: https://github.com/heise/HOAX/archive/master.zip) to a new 
 folder on your hard disk, for example E:\HX3\LATEST\. See 
 http://wiki.keyboardpartner.de/index.php?title=HX3_Remote/Update_Application for details un update procedure. 
