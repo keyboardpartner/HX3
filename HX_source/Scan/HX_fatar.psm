@@ -724,7 +724,7 @@ start_noisetimer:
                   COMP  s0, 0
                   RET   NZ                        ; wenn bereits gestartet
                   IN    s1, RND_NUMBER            ; zufällige Länge
-                  AND   s1, 5                     ; 0, 1, 4 oder 5
+                  AND   s1, 3                     ; 0 bis 3
                   FETCH s0, s_clicklen            ; Timer-Startwert
                   ADD   s0, 3
                   SUB   s0, s1                    ; um Zufallswert verlängern
@@ -736,9 +736,8 @@ start_noisetimer_fast:
                   COMP  s0, 0
                   RET   NZ                        ; wenn bereits gestartet
                   IN    s1, RND_NUMBER            ; zufällige Länge
-                  AND   s1, 3                     ; 0 bis 3
+                  AND   s1, 1                     ; 0 oder 1
                   FETCH s0, s_clicklen_fast       ; Timer-Startwert
-                  ADD   s0, 1
                   ADD   s0, s1                    ; um kleinen Zufallswert verkürzen
 
 set_noisetimer:
@@ -1110,7 +1109,7 @@ mididyn_to_s0:
 ; für upper, lower und bass: s0 je nach Dynamik setzen auf 1 oder 3
                   COMP  s0, 0                     ; MIDI-Taste aus, nichts machen?
                   RET   Z
-                  COMP  s0, $41                   ; Dynamikschwelle
+                  COMP  s0, $50                   ; Dynamikschwelle
                   JUMP  C, mididyn_to_keystatus_slow; springe wenn <$41
                   LOAD  s0, 3
                   RET   
