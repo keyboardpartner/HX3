@@ -45,11 +45,7 @@ Copy and unzip whole contents of this repo (full download link: https://github.c
 folder on your hard disk, for example E:\HX3\LATEST\. See 
 http://wiki.keyboardpartner.de/index.php?title=HX3_Remote/Update_Application for details un update procedure. 
 
-FPGA configuration and scan cores may be uploaded by provided HX3 Remote application. 
-
-### Directories
-
-* <b>LATEST</b>                    last firmware revisions and FPGA configurations, testing only<br>
+FPGA configuration and scan cores may be uploaded by provided HX3 Remote application. 28.03.2015 12:17:11
 * <b>DOCS_PDF</b>                  Syntax table for HX3 COM port, MIDI tables etc. <br>
 * <b>FPGACORES</b>                 FPGA configuration, reverb firmware and keyboard scan cores for upload with TeraTerm macro<br>
 * <b>PLATINEN</b>                  PCB schematics, mechanical drawings, board and component layouts<br>
