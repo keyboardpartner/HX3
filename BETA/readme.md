@@ -25,16 +25,18 @@ mk2 as well as mk3 boards. Some beta releases will be mk3 only at first publishi
 
 * HX3 Remote: #3.80 .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
-* AVR:  #3.805      .hex and .eep files, latest firmware for AVR controller
+* AVR:  #3.806      .hex and .eep files, latest firmware for AVR controller
 * FPGA: #29032015   .bit configuration file for FPGA update
 * SCAN: #$16        .dat ScanCore files
 
 
 ### Changelog
 
-<b>03/29/2015</b> Firmware #3.805, FPGA #29032015, HX3 Remote #3.80, Scan Rev. #16
+<b>03/29/2015</b> Firmware #3.806, FPGA #29032015, HX3 Remote #3.80, Scan Rev. #16
 
+* Updated presets to Emil's "Hammond Theater Presets" - thanks to Emil for his help
 * Cleaned up HX3 Remote user interface, moved some buttons to "Advaced" page
+* Fixed some minor bugs in HX3 Remote preset file handling
 * Re-work of firmware, FIR coefficients in flash memory instead of EEPROM, frees 512 EEPROM bytes for future use
 * Cleaned up MIDI CC interpreters, making room for additional CC set
 * Added MIDI CC support for both Hamichord and KeyB Duo (i.e. now 6 MIDI CC sets)
