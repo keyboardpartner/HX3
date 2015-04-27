@@ -12,7 +12,7 @@ mk3 as well as mk3 boards.
 ### Update Procedure
 
 * Download ZIP #3.80, unzip to new folder. Use only files/applications contained.
-* Start HX3 Remote and connect. 
+* Plug in USB and power supply cable, start HX3 Remote and connect. 
 * Click "Update AVR" and select appropriate HEX file. After "Refresh Info" new AVR Version should be displayed.
 * Click "Update FPGA" and select new FPGA_xxxxxx.bit file. This also uploads all scan cores and TG taper_level files.
 * Set appropiate scan core and options near "Write Basics" button.
@@ -36,8 +36,6 @@ mk3 as well as mk3 boards.
 
 * Improved reproduction of upper notes leakage
 * Pedal added to rotary simulation instead of plain output on "+B" audio configs
-
-### Changelog
 
 <b>03/10/2015</b> Firmware #3.74, FPGA #1003015, HX3 Remote #3.74, Scan Rev. #16
 
