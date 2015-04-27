@@ -14,7 +14,7 @@ mk2 as well as mk3 boards. Some beta releases will be mk3 only at first publishi
 ### Update Procedure
 
 * Download ZIP #3.80, unzip to new folder. Use only files/applications contained.
-* Start HX3 Remote and connect. 
+* Plug in USB and power supply cable, start HX3 Remote and connect. 
 * Click "Update AVR" and select appropriate HEX file. After "Refresh Info" new AVR Version should be displayed.
 * Click "Update FPGA" and select new FPGA_xxxxxx.bit file. This also uploads all scan cores and TG taper_level files.
 * Set appropiate scan core and options near "Write Basics" button.
