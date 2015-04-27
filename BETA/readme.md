@@ -18,7 +18,9 @@ mk2 as well as mk3 boards. Some beta releases will be mk3 only at first publishi
 * Click "Update AVR" and select appropriate HEX file. After "Refresh Info" new AVR Version should be displayed.
 * Click "Update FPGA" and select new FPGA_xxxxxx.bit file. This also uploads all scan cores and TG taper_level files.
 * Set appropiate scan core and options near "Write Basics" button.
-* Click "Write Basics".
+* If your HX3 already has Licences installed, check "Auto Restore Licences" and "Use previous HX3 board info". 
+* Otherwise, enter your Licence numbers in "Finalize Settings".
+* Click "Finalize". This transfers licences and also creates a factory reset record on HX3 board.
 * Check serials/licences, user and FW information after "Refresh Info". Done.
 
 ### Last Build
@@ -26,11 +28,16 @@ mk2 as well as mk3 boards. Some beta releases will be mk3 only at first publishi
 * HX3 Remote: #3.80 .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
 * AVR:  #3.806      .hex and .eep files, latest firmware for AVR controller
-* FPGA: #29032015   .bit configuration file for FPGA update
+* FPGA: #25042015   .bit configuration file for FPGA update
 * SCAN: #$16        .dat ScanCore files
 
 
 ### Changelog
+
+<b>04/27/2015</b> FPGA #25042015
+
+* Improved reproduction of upper notes leakage
+* Pedal added to rotary simulation instead of plain output on "+B" audio configs
 
 <b>03/29/2015</b> Firmware #3.806, FPGA #29032015, HX3 Remote #3.80, Scan Rev. #16
 

@@ -11,43 +11,31 @@ mk3 as well as mk3 boards.
 
 ### Update Procedure
 
-* Download ZIP package, unzip to new local folder. Use only files/applications contained in this folder.
+* Download ZIP #3.80, unzip to new folder. Use only files/applications contained.
 * Start HX3 Remote and connect. 
 * Click "Update AVR" and select appropriate HEX file. After "Refresh Info" new AVR Version should be displayed.
-* Click "Update FPGA" and select new FPGA_xxxxxx.bit file. This also uploads all scan cores.
+* Click "Update FPGA" and select new FPGA_xxxxxx.bit file. This also uploads all scan cores and TG taper_level files.
 * Set appropiate scan core and options near "Write Basics" button.
-* Click "Write Basics".
+* If your HX3 already has Licences installed, check "Auto Restore Licences" and "Use previous HX3 board info". 
+* Otherwise, enter your Licence numbers in "Finalize Settings".
+* Click "Finalize". This transfers licences and also creates a factory reset record on HX3 board.
 * Check serials/licences, user and FW information after "Refresh Info". Done.
-
 
 ### Last Build
 
-* HX3 Remote: #3.74	.exe for Windows XP and up
-* AVR:  #3.74       .hex and .eep files, latest firmware for AVR controller
-* FPGA: #09012015   .bit configuration file for FPGA update
-* SCAN: #$14        .dat ScanCore files
+* HX3 Remote: #3.80 .exe for Windows XP and up
+* HX3 Tapering	    .exe for Windows XP and up
+* AVR:  #3.806      .hex and .eep files, latest firmware for AVR controller
+* FPGA: #25042015   .bit configuration file for FPGA update
+* SCAN: #$16        .dat ScanCore files
 
-### Files
 
-Flash files for serial upload via AVRdude or HX3 Remote. Each .HEX file has a corresponding .EEP file. Versions for mk2 
-and mk3 version boards are in separate ZIP archives. Please update only the file appropriate for your product. 
-<b>Note:</b> For operation with firmware 3.5 and up, remove jumpers JP7 and JP8 which may still sit on your board from 
-factory programming. These jumpers are only required for updating the reverb DSP (no need to update unless noted).
+### Changelog
 
-<b>HX3mkX_std.hex</b> Standard version, mainboard with button presets or Preset16<br>
-<b>HX3mkX_expander.hex</b> MIDI expander box version<br>
-<b>HX3mkX_latching.hex</b> Mainboard with latching presets on Preset12<br>
-<b>HX3mkX_preset24.hex</b> Mainboard with presets on external Preset24<br>
-<b>HX3mkX_single.hex</b> Mainboard with button presets or Preset16, single manual drawbar assignment<br>
-<b>HX3mkX_single_bv.hex</b> Mainboard with button presets or Preset16, single manual drawbar assignment, button vibrato on Panel16<br>
-<b>HX3mk3_xb2.hex</b> HX3 Retrofit Kit for XB2 (mk3 only)<br>
+<b>04/27/2015</b> Firmware #3.806, FPGA #25042015
 
-<b>HX_xxx.dat</b>  Scan cores for different scan boards or MIDI input<br>
-<b>fpga_DDMMYYY.bit</b>  FPGA configuration (Sound Engine), creation date (version) encoded DDMMYYYY<br>
-<b>dsp_rev.bin</b>  Spin-FV1 Reverb DSP program<br>
-
-<b>HX3_avr_repair.ZIP</b>  Repair tool (command line batch) to restore corrupted firmware - see README in archive<br>
-
+* Improved reproduction of upper notes leakage
+* Pedal added to rotary simulation instead of plain output on "+B" audio configs
 
 ### Changelog
 
@@ -122,6 +110,27 @@ factory programming. These jumpers are only required for updating the reverb DSP
 * Virtual key contacts have "mutual resistance" now which yields a more "decent" click response
 * New remote parameters 400..481 directly access 81 params like menu selection by MenuPanel
 * Deleted obsolete remote params 500..563 despite some for compatibility (519..524)
+
+### Files
+
+Flash files for serial upload via AVRdude or HX3 Remote. Each .HEX file has a corresponding .EEP file. Versions for mk2 
+and mk3 version boards are in separate ZIP archives. Please update only the file appropriate for your product. 
+<b>Note:</b> For operation with firmware 3.5 and up, remove jumpers JP7 and JP8 which may still sit on your board from 
+factory programming. These jumpers are only required for updating the reverb DSP (no need to update unless noted).
+
+<b>HX3mkX_std.hex</b> Standard version, mainboard with button presets or Preset16<br>
+<b>HX3mkX_expander.hex</b> MIDI expander box version<br>
+<b>HX3mkX_latching.hex</b> Mainboard with latching presets on Preset12<br>
+<b>HX3mkX_preset24.hex</b> Mainboard with presets on external Preset24<br>
+<b>HX3mkX_single.hex</b> Mainboard with button presets or Preset16, single manual drawbar assignment<br>
+<b>HX3mkX_single_bv.hex</b> Mainboard with button presets or Preset16, single manual drawbar assignment, button vibrato on Panel16<br>
+<b>HX3mk3_xb2.hex</b> HX3 Retrofit Kit for XB2 (mk3 only)<br>
+
+<b>HX_xxx.dat</b>  Scan cores for different scan boards or MIDI input<br>
+<b>fpga_DDMMYYY.bit</b>  FPGA configuration (Sound Engine), creation date (version) encoded DDMMYYYY<br>
+<b>dsp_rev.bin</b>  Spin-FV1 Reverb DSP program<br>
+
+<b>HX3_avr_repair.ZIP</b>  Repair tool (command line batch) to restore corrupted firmware - see README in archive<br>
 
 Please also regard installation instructions on http://wiki.keyboardpartner.de!
 
