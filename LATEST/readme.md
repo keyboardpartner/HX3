@@ -24,14 +24,21 @@ mk3 as well as mk3 boards.
 
 ### Last Build
 
-* HX3 Remote: #3.80 .exe for Windows XP and up
+* HX3 Remote: #3.81 .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
-* AVR:  #3.806      .hex and .eep files, latest firmware for AVR controller
+* AVR:  #3.81      .hex and .eep files, latest firmware for AVR controller
 * FPGA: #25042015   .bit configuration file for FPGA update
 * SCAN: #$16        .dat ScanCore files
 
 
 ### Changelog
+
+<b>06/23/2015</b> Firmware #3.81
+
+* fixed distortions when playing full chord in upper octave (please update FPGA also, use fpga_25042015.bit, installs new TG tapering files)
+* fixed missing percussion bug on common preset 1
+* improved potentiometer/drawbar hysteresis for noise-free operation
+* minor changes to HX3 Remote to prevent loss of licence numbers
 
 <b>04/27/2015</b> Firmware #3.806, FPGA #25042015
 
