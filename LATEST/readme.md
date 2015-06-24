@@ -16,9 +16,8 @@ mk3 as well as mk3 boards.
 * Click "Update FW" and select appropriate HEX file (for example "xxx_std" for HX3 board installations, "xxx_expander" for MIDI expander module). 
 * Procedure takes about one minute, AVRdude progress shown in separate command window.
 * Click "Update FPGA" and select new FPGA_xxxxxx.bit file. This also uploads all scan cores and TG taper_level files.
-* Set appropiate scan core and options near "Write Basics" button.
-* If your HX3 already has Licences installed, check "Auto Restore Licences" and "Use previous HX3 board info". 
-* Otherwise, enter your Licence numbers in "Finalize Settings".
+* Set appropiate scan core and options near "Finalize" button.
+* If your HX3 already has Licences installed, these are transferred to updated HX3. Otherwise, enter your name and (new) Licence numbers in "Finalize Settings" on "Advaced" tab page and click "Send Licences".
 * Click "Finalize". This transfers licences and also creates a factory reset record on HX3 board.
 * Check serials/licences, user and FW information after "Refresh Info". Done.
 
@@ -33,10 +32,10 @@ mk3 as well as mk3 boards.
 
 ### Changelog
 
-<b>06/23/2015</b> Firmware #3.81
+<b>06/24/2015</b> Firmware #3.81b
 
 * fixed distortions when playing full chord in upper octave (please update FPGA also, use fpga_25042015.bit, installs new TG tapering files)
-* fixed missing percussion bug on common preset 1
+* fixed missing percussion bug after common preset save
 * improved potentiometer/drawbar hysteresis for noise-free operation
 * minor changes to HX3 Remote to prevent loss of licence numbers
 
