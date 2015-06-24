@@ -11,15 +11,15 @@ mk3 as well as mk3 boards.
 
 ### Update Procedure
 
-* Download ZIP #3.80, unzip to new folder. Use only files/applications contained.
+* Download latest ZIP (see list below), unzip to new folder. Use only files/applications contained in ZIP.
 * Plug in USB and power supply cable, start HX3 Remote and connect. 
 * Click "Update FW" and select appropriate HEX file (for example "xxx_std" for HX3 board installations, "xxx_expander" for MIDI expander module). 
 * Procedure takes about one minute, AVRdude progress shown in separate command window.
 * Click "Update FPGA" and select new FPGA_xxxxxx.bit file. This also uploads all scan cores and TG taper_level files.
-* Set appropiate scan core and options near "Finalize" button.
 * If your HX3 already has Licences installed, these are transferred to updated HX3. Otherwise, enter your name and (new) Licence numbers in "Finalize Settings" on "Advaced" tab page and click "Send Licences".
+* Set appropiate scan core and options near "Finalize" button.
 * Click "Finalize". This transfers licences and also creates a factory reset record on HX3 board.
-* Check serials/licences, user and FW information after "Refresh Info". Done.
+* Check serials/licences, user and FW information. Indicators near Licence info fields should be light green and show "OK". Done!
 
 ### Last Build
 
