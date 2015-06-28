@@ -23,7 +23,7 @@ mk3 as well as mk3 boards.
 
 ### Last Build
 
-* HX3 Remote: #3.81 .exe for Windows XP and up
+* HX3 Remote: #3.812 .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
 * AVR:  #3.81      .hex and .eep files, latest firmware for AVR controller
 * FPGA: #25042015   .bit configuration file for FPGA update
@@ -32,7 +32,12 @@ mk3 as well as mk3 boards.
 
 ### Changelog
 
-<b>06/24/2015</b> Firmware #3.81b
+<b>06/24/2015</b> Firmware #3.812
+
+* Linear display mapping (MIDI as well as analog drawbar input) to better match the drawbar numbering
+* Drawbar loudness logarithmisation to fit B3 drawbar curve
+
+<b>06/24/2015</b> Firmware #3.81
 
 * fixed distortions when playing full chord in upper octave (please update FPGA also, use fpga_25042015.bit, installs new TG tapering files)
 * fixed missing percussion bug after common preset save
