@@ -36,6 +36,7 @@ mk3 as well as mk3 boards.
 
 * Linear display mapping (MIDI as well as analog drawbar input) to better match the drawbar numbering
 * Drawbar loudness logarithmisation to fit B3 drawbar curve
+* Potentiometer/drawbar input hysteresis changed
 
 <b>06/24/2015</b> Firmware #3.81
 
