@@ -26,17 +26,18 @@ mk3 as well as mk3 boards.
 * HX3 Remote: #3.812 .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
 * AVR:  #3.81      .hex and .eep files, latest firmware for AVR controller
-* FPGA: #25042015   .bit configuration file for FPGA update
+* FPGA: #29062015   .bit configuration file for FPGA update
 * SCAN: #$16        .dat ScanCore files
 
 
 ### Changelog
 
-<b>06/24/2015</b> Firmware #3.812
+<b>06/29/2015</b> Firmware #3.812, FPGA #29062015
 
 * Linear display mapping (MIDI as well as analog drawbar input) to better match the drawbar numbering
 * Drawbar loudness logarithmisation to fit B3 drawbar curve
 * Potentiometer/drawbar input hysteresis changed
+* Improved V2/V3 vibrato and LC line box "Age" parameter range
 
 <b>06/24/2015</b> Firmware #3.81
 
