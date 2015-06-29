@@ -3,7 +3,9 @@ HX3 Beta Test Firmware
 
 <b>Beta test copy for evaluation with HX3 Remote application</b>
 
-<b>Please note: These files are intended for Beta testers only and may contain undocumented features as well as unknown bugs.</b>
+<b>Please note: These files are intended for Beta testers only and may contain undocumented features as well as unknown bugs.
+If no ZIP is present, firmware has become final. See LATEST directory.</b>
+
 
 Copy and unzip single ZIP files or whole contents of this repo (full download link: 
 https://github.com/heise/HOAX/archive/master.zip) to a new folder on your hard disk, for example E:\HX3\LATEST\. See 
@@ -13,7 +15,7 @@ mk2 as well as mk3 boards. Some beta releases will be mk3 only at first publishi
 
 ### Update Procedure
 
-* Download ZIP #3.80, unzip to new folder. Use only files/applications contained.
+* Download latest ZIP, unzip to new folder. Use only files/applications contained.
 * Plug in USB and power supply cable, start HX3 Remote and connect. 
 * Click "Update FW" and select appropriate HEX file (for example "xxx_std" for HX3 board installations, "xxx_expander" for MIDI expander module). 
 * Procedure takes about one minute, AVRdude progress shown in separate command window.
@@ -26,6 +28,8 @@ mk2 as well as mk3 boards. Some beta releases will be mk3 only at first publishi
 
 ### Last Build
 
+Note: If no ZIP present, firmware has become final. See LATEST directory.
+
 * HX3 Remote: #3.80 .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
 * AVR:  #3.806      .hex and .eep files, latest firmware for AVR controller
@@ -34,6 +38,7 @@ mk2 as well as mk3 boards. Some beta releases will be mk3 only at first publishi
 
 
 ### Changelog
+
 
 <b>04/27/2015</b> FPGA #25042015
 
