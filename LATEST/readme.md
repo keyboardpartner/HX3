@@ -32,6 +32,18 @@ mk3 as well as mk3 boards.
 
 ### Changelog
 
+<b>07/01/2015</b> Firmware #3.82
+
+From firmware 3.82 and up, HX3 will not send own MIDI CCs on MIDI OUT when MIDI Option = 3 (RcvSndMgNoCC). 
+MIDI Option = 3 is now default on all firmwares except HX3 Expander (which has to accept MIDI CCs). 
+This change has been made since the MIDI CCs HX3 sends out may disturb connected MIDI workstations/arrangers.
+Note: If send/receive of MIDI CCs is enabled (Option = 1 or 2), 
+HX3 will transmit its own CCs (drawbars etc.) always according to NI B4 set, 
+independent from selected MIDI CC interpreter. 
+
+* Modified MIDI Option = RcvSndMgNoCC behaviour
+* RcvSndMgNoCC option is now default on HX3 firmwares except for HX3 Expander
+
 <b>06/29/2015</b> Firmware #3.812, FPGA #29062015
 
 * Linear display mapping (MIDI as well as analog drawbar input) to better match the drawbar numbering
