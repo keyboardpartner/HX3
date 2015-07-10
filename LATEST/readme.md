@@ -7,7 +7,7 @@ Copy and unzip single ZIP files or whole contents of this repo (full download li
 https://github.com/heise/HOAX/archive/master.zip) to a new folder on your hard disk, for example E:\HX3\LATEST\. See 
 http://wiki.keyboardpartner.de/index.php?title=HX3_Remote/Update_Application for details un update procedure. From
 03/2015, ZIP files will contain all necessary files (including FPGA, AVR and ScanCores) plus appropriate HX3 Remote for 
-mk3 as well as mk3 boards.
+mk3 as well as mk3 boards. Scroll to bottom of page for file usage.
 
 ### Update Procedure
 
@@ -23,16 +23,16 @@ mk3 as well as mk3 boards.
 
 ### Last Build
 
-* HX3 Remote: #3.812 .exe for Windows XP and up
+* HX3 Remote: #3.81 .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
-* AVR:  #3.81      .hex and .eep files, latest firmware for AVR controller
-* FPGA: #29062015   .bit configuration file for FPGA update
-* SCAN: #$16        .dat ScanCore files
+* AVR:  #3.822      .hex and .eep files, latest firmware for AVR controller
+* FPGA: #05072015   .bit configuration file for FPGA update
+* SCAN: #$17        .dat ScanCore files
 
 
 ### Changelog
 
-<b>07/01/2015</b> Firmware #3.82
+<b>07/09/2015</b> Firmware #3.822, FPGA #05072015, ScanCores #17
 
 From firmware 3.82 and up, HX3 will not send own MIDI CCs on MIDI OUT when MIDI Option = 3 (RcvSndMgNoCC). 
 MIDI Option = 3 is now default on all firmwares except HX3 Expander (which has to accept MIDI CCs). 
@@ -41,8 +41,22 @@ Note: If send/receive of MIDI CCs is enabled (Option = 1 or 2),
 HX3 will transmit its own CCs (drawbars etc.) always according to NI B4 set, 
 independent from selected MIDI CC interpreter. 
 
-* Modified MIDI Option = RcvSndMgNoCC behaviour
+Independent from MIDI option selected, HX3 will always send a 3.3V TTL level MIDI signal on 
+PL16 pin 8 for controlling Ventilator/Minivent DSP board with synced stop/slow/fast.
+Pin 34 of Vent DSP board is MIDI TTL input. Also wire digital ground (PL16 pin 10). 
+Ventilator DSP accepts MIDI CC #21 values 0 (stop), 1 (slow), 2 (fast) on channel 1.
+
+* Fixed bass pedal drawbar bug on some MIDI CC sets due to flaw in ScanCores
+* Fixed erraneous display/saving of AudioJ Conf A/B
+* Modified MIDI Option = RcvSndMgNoCC behaviour (see above)
+* HX3 now sends MIDI CC #1 and #44 for rotary footswitch when MIDI Option = 1 or 2
 * RcvSndMgNoCC option is now default on HX3 firmwares except for HX3 Expander
+* Added MIDI CCs for Hamichord/Mojo CC set:
+** #1 = Rotary Slow/Stop/Fast
+** #91 = TG Leakage, 
+** #92 = TG Cap set, 
+** #95 = Swell Trim Cap
+* Additional TTL MIDI output for controlling Ventilator/Minivent DSP board (see above)
 
 <b>06/29/2015</b> Firmware #3.812, FPGA #29062015
 
@@ -63,7 +77,7 @@ independent from selected MIDI CC interpreter.
 * Improved reproduction of upper notes leakage
 * Pedal added to rotary simulation instead of plain output on "+B" audio configs
 
-<b>03/10/2015</b> Firmware #3.74, FPGA #1003015, HX3 Remote #3.74, Scan Rev. #16
+<b>03/10/2015</b> Firmware #3.74, FPGA #1003015, HX3 Remote #3.74, ScanCores #16
 
 * Working copy for evaluation - not final!
 * Common Presets save current keyboard split mode and split point
@@ -72,7 +86,7 @@ independent from selected MIDI CC interpreter.
 
 * Not fixed yet: Display of output configurations A/B may be erraneous
 
-<b>01/10/2015</b> Firmware #3.72, FPGA #09012015, HX3 Remote #3.7, Scan Rev. #14
+<b>01/10/2015</b> Firmware #3.72, FPGA #09012015, HX3 Remote #3.7, ScanCores #14
 
 * Some changes in Hammond MIDI CC set for XK3c (relocated reverb and lower vibrato ON buttons), see HX3 Expander User Manual (directory DOCS_PDF) for details.
 * Fixed Bug in ScanCores OrganScan61 and Strip16, Bass Split was not working
@@ -142,10 +156,11 @@ and mk3 version boards are in separate ZIP archives. Please update only the file
 <b>Note:</b> For operation with firmware 3.5 and up, remove jumpers JP7 and JP8 which may still sit on your board from 
 factory programming. These jumpers are only required for updating the reverb DSP (no need to update unless noted).
 
-<b>HX3mkX_std.hex</b> Standard version, mainboard with button presets or Preset16<br>
+<b>HX3mkX_std.hex</b> Standard version, mainboard with button presets, Preset12 or Preset16<br>
 <b>HX3mkX_expander.hex</b> MIDI expander box version<br>
 <b>HX3mkX_latching.hex</b> Mainboard with latching presets on Preset12<br>
 <b>HX3mkX_preset24.hex</b> Mainboard with presets on external Preset24<br>
+<b>HX3mkX_mag.hex</b> Special version for MAG custom organs<br>
 <b>HX3mkX_single.hex</b> Mainboard with button presets or Preset16, single manual drawbar assignment<br>
 <b>HX3mkX_single_bv.hex</b> Mainboard with button presets or Preset16, single manual drawbar assignment, button vibrato on Panel16<br>
 <b>HX3mk3_xb2.hex</b> HX3 Retrofit Kit for XB2 (mk3 only)<br>
