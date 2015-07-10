@@ -48,14 +48,15 @@ Ventilator DSP accepts MIDI CC #21 values 0 (stop), 1 (slow), 2 (fast) on channe
 
 * Fixed bass pedal drawbar bug on some MIDI CC sets due to flaw in ScanCores
 * Fixed erraneous display/saving of AudioJ Conf A/B
+* Fixed Percussion mute bug on presets 1..15
 * Modified MIDI Option = RcvSndMgNoCC behaviour (see above)
 * HX3 now sends MIDI CC #1 and #44 for rotary footswitch when MIDI Option = 1 or 2
 * RcvSndMgNoCC option is now default on HX3 firmwares except for HX3 Expander
 * Added MIDI CCs for Hamichord/Mojo CC set:
-*  #1 = Rotary Slow/Stop/Fast
-*  #91 = TG Leakage, 
-*  #92 = TG Cap set, 
-*  #95 = Swell Trim Cap
+* > #1 = Rotary Slow/Stop/Fast (modulation wheel),
+* > #91 = TG Leakage (is "Crosstalk" knob on Mojo), 
+* > #92 = TG Cap set (is "Keyclick Length" knob on Mojo), 
+* > #95 = Swell Trim Cap (is "Percussion Volume" knob on Mojo)
 * Additional TTL MIDI output for controlling Ventilator/Minivent DSP board (see above)
 
 <b>06/29/2015</b> Firmware #3.812, FPGA #29062015
