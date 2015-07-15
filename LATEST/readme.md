@@ -46,6 +46,7 @@ PL16 pin 8 for controlling Ventilator/Minivent DSP board with synced stop/slow/f
 Pin 34 of Vent DSP board is MIDI TTL input. Also wire digital ground (PL16 pin 10). 
 Ventilator DSP accepts MIDI CC #21 values 0 (stop), 1 (slow), 2 (fast) on channel 1.
 
+* New HX3 Update application - simple no-hassle updater for mk3 and mk4 boards (public beta)
 * Fixed bass pedal drawbar bug on some MIDI CC sets due to flaw in ScanCores
 * Fixed erraneous display/saving of AudioJ Conf A/B
 * Fixed Percussion mute bug on presets 1..15
