@@ -5,25 +5,15 @@ HX3 Latest Firmware
 
 Copy and unzip single ZIP files or whole contents of this repo (full download link: 
 https://github.com/heise/HOAX/archive/master.zip) to a new folder on your hard disk, for example E:\HX3\LATEST\. See 
-http://wiki.keyboardpartner.de/index.php?title=HX3_Remote/Update_Application for details un update procedure. From
-03/2015, ZIP files will contain all necessary files (including FPGA, AVR and ScanCores) plus appropriate HX3 Remote for 
+http://wiki.keyboardpartner.de/index.php?title=HX3_Update_Application for details un update procedure. From
+03/2015, ZIP files will contain all necessary files (including FPGA, AVR and ScanCores) plus appropriate HX3 Remote/Update for 
 mk3 as well as mk3 boards. Scroll to bottom of page for file usage.
 
-### Update Procedure
-
-* Download latest ZIP (see list below), unzip to new folder. Use only files/applications contained in ZIP.
-* Plug in USB and power supply cable, start HX3 Remote and connect. 
-* Click "Update FW" and select appropriate HEX file (for example "xxx_std" for HX3 board installations, "xxx_expander" for MIDI expander module). 
-* Procedure takes about one minute, AVRdude progress shown in separate command window.
-* Click "Update FPGA" and select new FPGA_xxxxxx.bit file. This also uploads all scan cores and TG taper_level files.
-* If your HX3 already has Licences installed, these are transferred to updated HX3. Otherwise, enter your name and (new) Licence numbers in "Finalize Settings" on "Advaced" tab page and click "Send Licences".
-* Set appropiate scan core and options near "Finalize" button.
-* Click "Finalize". This transfers licences and also creates a factory reset record on HX3 board.
-* Check serials/licences, user and FW information. Indicators near Licence info fields should be light green and show "OK". Done!
 
 ### Last Build
 
 * HX3 Remote: #3.81 .exe for Windows XP and up
+* HX3 Update: #3.82 .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
 * AVR:  #3.822      .hex and .eep files, latest firmware for AVR controller
 * FPGA: #05072015   .bit configuration file for FPGA update
