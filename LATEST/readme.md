@@ -5,7 +5,7 @@ HX3 Latest Firmware
 
 Copy and unzip single ZIP files or whole contents of this repo (full download link: 
 https://github.com/heise/HOAX/archive/master.zip) to a new folder on your hard disk, for example E:\HX3\LATEST\. See 
-http://wiki.keyboardpartner.de/index.php?title=HX3_Update_Application for details un update procedure. From
+http://wiki.keyboardpartner.de/index.php?title=HX3_Update_Application for details on update procedure. From
 03/2015, ZIP files will contain all necessary files (including FPGA, AVR and ScanCores) plus appropriate HX3 Remote/Update for 
 mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 
@@ -13,7 +13,7 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 ### Last Build
 
 * HX3 Remote: #3.81 .exe for Windows XP and up
-* HX3 Update: #3.82 .exe for Windows XP and up
+* HX3 Flash: #3.82  .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
 * AVR:  #3.822      .hex and .eep files, latest firmware for AVR controller
 * FPGA: #05072015   .bit configuration file for FPGA update
@@ -36,7 +36,7 @@ PL16 pin 8 for controlling Ventilator/Minivent DSP board with synced stop/slow/f
 Pin 34 of Vent DSP board is MIDI TTL input. Also wire digital ground (PL16 pin 10). 
 Ventilator DSP accepts MIDI CC #21 values 0 (stop), 1 (slow), 2 (fast) on channel 1.
 
-* New HX3 Update application - simple no-hassle updater for mk3 and mk4 boards (public beta)
+* New HX3 Flash application - simple no-hassle updater for mk3 and mk4 boards (public beta)
 * Fixed bass pedal drawbar bug on some MIDI CC sets due to flaw in ScanCores
 * Fixed erraneous display/saving of AudioJ Conf A/B
 * Fixed Percussion mute bug on presets 1..15
