@@ -12,7 +12,7 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 
 ### Last Build
 
-* HX3 Remote: #3.81 .exe for Windows XP and up
+* HX3 Remote: #3.82 .exe for Windows XP and up
 * HX3 Flash: #3.82  .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
 * AVR:  #3.822      .hex and .eep files, latest firmware for AVR controller
@@ -21,6 +21,11 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 
 
 ### Changelog
+
+<b>07/24/2015</b> Firmware #3.822, HX3 Remote #3.82
+
+* Fixed a bug in HX3 Remote, lost licences when updating firmware
+* HX3 Flash minor changes
 
 <b>07/09/2015</b> Firmware #3.822, FPGA #05072015, ScanCores #17
 
