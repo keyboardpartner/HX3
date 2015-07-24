@@ -25,7 +25,7 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 <b>07/24/2015</b> Firmware #3.822, HX3 Remote #3.82
 
 * Fixed a bug in HX3 Remote, lost licences when updating firmware
-* HX3 Flash minor changes
+* HX3 Flash minor changes for reliability
 
 <b>07/09/2015</b> Firmware #3.822, FPGA #05072015, ScanCores #17
 
