@@ -15,24 +15,25 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 * HX3 Remote: #3.83 .exe for Windows XP and up
 * HX3 Flash: #3.8   .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
-* AVR:  #3.83b      .hex and .eep files, latest firmware for AVR controller
+* AVR:  #3.83c      .hex and .eep files, latest firmware for AVR controller
 * FPGA: #05072015   .bit configuration file for FPGA update
 * SCAN: #$17        .dat ScanCore files
 
 
 ### Changelog
 
-<b>08/24/2015</b> Firmware #3.83b
+<b>08/28/2015</b> Firmware #3.83c
 
 * backup for licence numbers if corrupted EEPROM
 * added a warning if HX3 is not finalized, for more reliable update with HX3 Flash on HX3 board installations
-* HX3 will go into update mode (will not poll drawbars and buttons/tabs) if not finalized
+* HX3 will not work if not finalized to prevent incomplete updates
 * refined lower manual drawbar log curve
 * fixed bug in MAG organs firmware (pedal output)
 * new tapering files
 * more volume on pedal bass 16'
-* refinements for HX3 Remote and HX3 Flash
+* improvements for HX3 Remote and HX3 Flash
 * added production programming for DIAMEX ISP programmer
+* removed unneccessary messages from HX3 Remote
 
 <b>07/24/2015</b> Firmware #3.822, HX3 Remote #3.82
 
