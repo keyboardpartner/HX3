@@ -32,11 +32,10 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 * new optimized tapering files - more punch, less peaks
 * more volume on pedal bass 16'
 * improvements for HX3 Remote and HX3 Flash
-* added production programming for DIAMEX ISP programmer
 * removed unneccessary messages from HX3 Remote
 * Alternate  drawbar set select signal for particular preset number, Parameter 483 in Organ Defaults. HX3 will switch to alternate drawbar set when prset number in parameter 483 is active.
 * Single Preset16 is not splitted to 8/8 configuration for upper/lower manual if parameter 484 is "on". All 16 presets are available for upper manual.
-* OEMs only: Production programming moved to "Advanced" tab in HX3 Remote
+* OEMs only: Added production programming for DIAMEX ISP programmer ("Advanced" tab) in HX3 Remote
 
 <b>07/24/2015</b> Firmware #3.822, HX3 Remote #3.82
 
