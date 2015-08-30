@@ -22,7 +22,7 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 
 ### Changelog
 
-<b>08/28/2015</b> Firmware #3.83c
+<b>08/28/2015</b> Firmware #3.83c, new tapering
 
 * backup for licence numbers if corrupted EEPROM
 * added a warning if HX3 is not finalized, for more reliable update with HX3 Flash on HX3 board installations
@@ -34,6 +34,7 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 * improvements for HX3 Remote and HX3 Flash
 * added production programming for DIAMEX ISP programmer
 * removed unneccessary messages from HX3 Remote
+* optimized tapering - more punch, less peaks
 
 <b>07/24/2015</b> Firmware #3.822, HX3 Remote #3.82
 
