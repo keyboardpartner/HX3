@@ -22,7 +22,14 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 
 ### Changelog
 
-<b>08/28/2015</b> Firmware #3.83c, new tapering
+<b>09/04/2015</b> Firmware #3.83c, new tapering
+
+* updated HX3 Remote and HX3 Flash to Windows 8/10 compatility
+* new rotary horn FIR filter coeffs for less peaks
+* corrected taper_levels files, old tapering tends to overflow distortion
+* adjusted output levels for each taperlevels file
+
+<b>08/28/2015</b> Firmware #3.83c
 
 * backup for licence numbers if corrupted EEPROM
 * added a warning if HX3 is not finalized, for more reliable update with HX3 Flash on HX3 board installations
