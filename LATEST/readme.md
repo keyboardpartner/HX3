@@ -15,12 +15,18 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 * HX3 Remote: #3.83 .exe for Windows XP and up
 * HX3 Flash: #3.8   .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
-* AVR:  #3.83c      .hex and .eep files, latest firmware for AVR controller
-* FPGA: #05072015   .bit configuration file for FPGA update
+* AVR:  #3.84       .hex and .eep files, latest firmware for AVR controller
+* FPGA: #09102015   .bit configuration file for FPGA update
 * SCAN: #$17        .dat ScanCore files
 
 
 ### Changelog
+
+<b>10/09/2015</b> Firmware #3.84
+
+* Completely re-written scanner vibrato and scanner capacitor blending
+* Bugfix in HX3_tapering.exe concerning "Save All" function, will regard individual level scaling now
+* Updated XB2 firmware (HX3 mk3/mk4 only)
 
 <b>09/04/2015</b> Firmware #3.83c, new tapering
 
