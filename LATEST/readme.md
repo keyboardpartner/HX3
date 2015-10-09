@@ -22,12 +22,13 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 
 ### Changelog
 
-<b>10/09/2015</b> Firmware #3.84
+<b>10/09/2015</b> Firmware #3.84, FPGA #09102015
 
 * Completely re-written scanner vibrato and scanner capacitor blending
-* Might need some Chorus Dry/Wet tweaking to your taste
+* May need some Chorus Dry/Wet and Age param tweaking to your taste
 * Bugfix in HX3_tapering.exe concerning "Save All" function, will regard individual level scaling now
 * Updated XB2 firmware (HX3 mk3/mk4 only)
+* Please update AVR firmware <b>and</b> FPGA
 
 <b>09/04/2015</b> Firmware #3.83c, new tapering
 
