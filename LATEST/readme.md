@@ -25,6 +25,7 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 <b>10/09/2015</b> Firmware #3.84
 
 * Completely re-written scanner vibrato and scanner capacitor blending
+* Might need some Chorus Dry/Wet tweaking to your taste
 * Bugfix in HX3_tapering.exe concerning "Save All" function, will regard individual level scaling now
 * Updated XB2 firmware (HX3 mk3/mk4 only)
 
