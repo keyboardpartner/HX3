@@ -16,14 +16,15 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 * HX3 Flash: #3.8   .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
 * AVR:  #3.84       .hex and .eep files, latest firmware for AVR controller
-* FPGA: #13102015   .bit configuration file for FPGA update
+* FPGA: #16102015   .bit configuration file for FPGA update
 * SCAN: #$17        .dat ScanCore files
 
 
 ### Changelog
 
-<b>10/09/2015</b> Firmware #3.84, FPGA #13102015
+<b>10/16/2015</b> Firmware #3.84, FPGA #16102015
 
+* Fixed annoying "ticker noise when keys released" bug in vibrato
 * Reduced granular switching noise in new vibrato
 * Reduced Dry/Mix amount
 * Raised Bass pedal level by 50%, slightly reduced harmonic content
