@@ -22,6 +22,10 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 
 ### Changelog
 
+<b>10/23/2015</b> ScanCore #18 for XB2
+
+* Fixed Split bug, split did not work on #17. Just replace XB2 ScanCore in HX3 Remote.
+
 <b>10/16/2015</b> Firmware #3.841, FPGA #16102015
 
 * Fixed annoying "ticker noise when keys released" bug in vibrato
