@@ -22,7 +22,7 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 
 ### Changelog
 
-<b>11/23/2015</b> Firmware #3.843, ScanCore #18 for MIDI input, FPGA 11112015
+<b>11/23/2015</b> Firmware #3.85, ScanCore #18 for MIDI input, FPGA 11112015 <b>PRELIMINARY</b>
 
 * Added "Sustain", "Sostenuto" and "All Notes Off" accepted MIDI commands, MIDI ScanCore #18 only!
 * Improved overflow behaviour in busbar adders, somewhat louder bass pedal
