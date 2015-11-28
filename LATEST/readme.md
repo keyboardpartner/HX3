@@ -15,14 +15,20 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 * HX3 Remote: #3.83 .exe for Windows XP and up
 * HX3 Flash: #3.8   .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
-* AVR:  #3.843      .hex and .eep files, latest firmware for AVR controller
-* FPGA: #11112015   .bit configuration file for FPGA update
-* SCAN: #$17        .dat ScanCore files
+* AVR:  #3.85       .hex and .eep files, latest firmware for AVR controller
+* FPGA: #27112015   .bit configuration file for FPGA update
+* SCAN: #17         .dat ScanCore files, #18 for MIDI input and XB2
 
 
 ### Changelog
 
-<b>11/23/2015</b> Firmware #3.85, ScanCore #18 for MIDI input, FPGA 11112015 <b>PRELIMINARY</b>
+<b>11/28/2015</b> Firmware #3.85, FPGA 27112015 <b>PRELIMINARY</b>
+
+* revised rotary params in firmware
+* new FPGA 27112015, uses interpolating modulation scheme from FPGA16102015, but 16x oversampling
+* no new firmware version number
+
+<b>11/23/2015</b> Firmware #3.85, ScanCore #18 for MIDI input, FPGA 27112015 <b>PRELIMINARY</b>
 
 * Added "Sustain", "Sostenuto" and "All Notes Off" accepted MIDI commands, MIDI ScanCore #18 only!
 * Improved overflow behaviour in busbar adders, somewhat louder bass pedal
