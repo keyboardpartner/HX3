@@ -15,12 +15,20 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 * HX3 Remote: #3.83 .exe for Windows XP and up
 * HX3 Flash: #3.8   .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
-* AVR:  #3.85       .hex and .eep files, latest firmware for AVR controller
+* AVR:  #3.851      .hex and .eep files, latest firmware for AVR controller
 * FPGA: #27112015   .bit configuration file for FPGA update
-* SCAN: #17         .dat ScanCore files, #18 for MIDI input and XB2
+* SCAN: #17         .dat ScanCore files, #19 for MIDI input and XB2
 
 
 ### Changelog
+
+<b>12/04/2015</b> Firmware #3.851, FPGA 27112015, MIDI IN ScanCore #19
+
+* adjustable vibrato scanner gearing, param 488 in HX3 remote (located just before "Vib1 LC age")
+* fixed unwanted "feature" in MIDI IN ScanCore #18. Sostenuto CC #66 robbed PERC ON in NI B4 CC set 
+* instead, Sustain on CC #64 may be switched to Sostenuto functionality by HX3 Remote param 489 
+* new MIDI ScanCore #19 compatible with older FW
+* new HX3 Remote organ defaults file
 
 <b>11/28/2015</b> Firmware #3.85, FPGA 27112015 <b>PRELIMINARY</b>
 
