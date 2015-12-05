@@ -24,26 +24,19 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 
 <b>12/04/2015</b> Firmware #3.851, FPGA 27112015, MIDI IN ScanCore #19
 
+* Added "Sustain", "Sostenuto" and "All Notes Off" accepted MIDI commands, MIDI ScanCore #19 only!
 * adjustable vibrato scanner gearing, param 488 in HX3 remote (located just before "Vib1 LC age")
 * fixed unwanted "feature" in MIDI IN ScanCore #18. Sostenuto CC #66 robbed PERC ON in NI B4 CC set 
 * instead, Sustain on CC #64 may be switched to Sostenuto functionality by HX3 Remote param 489 
 * new MIDI ScanCore #19 compatible with older FW
 * new HX3 Remote organ defaults file
-
-<b>11/28/2015</b> Firmware #3.85, FPGA 27112015 <b>PRELIMINARY</b>
-
+* new FPGA 27112015, uses 16x oversampling
+* improved overflow behaviour in busbar adders, somewhat louder bass pedal
+* less prone to overflow distortions on loud tapering settings
+* higher audio output level on rotary simulation
+* rotary simluation delay lines now with 16x oversampling rate, should result in less modulation artefacts
 * revised rotary params in firmware
-* new FPGA 27112015, uses interpolating modulation scheme from FPGA16102015, but 16x oversampling
-* no new firmware version number
-
-<b>11/23/2015</b> Firmware #3.85, ScanCore #18 for MIDI input, FPGA 27112015 <b>PRELIMINARY</b>
-
-* Added "Sustain", "Sostenuto" and "All Notes Off" accepted MIDI commands, MIDI ScanCore #18 only!
-* Improved overflow behaviour in busbar adders, somewhat louder bass pedal
-* Less prone to overflow distortions on loud tapering settings
-* Higher audio output level on rotary simulation
-* Rotary simluation delay lines now with 16x oversampling rate, should result in less modulation artefacts
-* Simplified Leslie default parameters in HX3 Remote
+* Simplified "Leslie" default parameters in HX3 Remote
 
 <b>10/23/2015</b> ScanCore #18 for XB2
 
