@@ -37,6 +37,7 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 * rotary simluation delay lines now with 16x oversampling rate, should result in less modulation artefacts
 * revised rotary params in firmware
 * Simplified "Leslie" default parameters in HX3 Remote
+* fixed minor "no VibKnob save on preset 0" bug in MIDI Expander firmware
 
 <b>10/23/2015</b> ScanCore #18 for XB2
 
