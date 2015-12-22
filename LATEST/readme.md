@@ -22,6 +22,19 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 
 ### Changelog
 
+<b>12/20/2015</b> Firmware #3.90 PRELIMINARY, FPGA 27112015, MIDI IN ScanCore #20
+
+* "Master Volume" menu entry, affects all 4 output signals. Available by pressing encoder knob twice.
+* MIDI ScanCore #20 provides +1 and +2 octave up of lower manual in upper manual split mode. Will be implemented in other scan cores soon.
+* Emphasised "throb" in rotary horn simulation with FPGA #20122015
+* Refined rotary modulation parameters. Those in FW #3.85 were a little low, resulting in a somewhat "flat" modulation.
+* Less artefacts (see note below)
+* Support for HX3 Drawbar Expander. In this firmware TONE pot analog input is mapped to MASTER VOLUME, otherwise it is compatible with HX3 standard firmware for board installations. TONE pot parameter is available as menu entry only.
+* Deleted obsolete menu entries for standard firmware
+* Rotary stops on front center position for both rotor and horn (phew! That was hard work...)
+* "freewheel taper-off" effect when rotary stopped from slow or fast run
+* Sostenuto/Sustain selection moved to MIDI CC set entries to make it available through menu system. 6 additional entries with "." will have sostenuto on MIDI CC #64 instead of sustain.
+
 <b>12/04/2015</b> Firmware #3.851, FPGA 27112015, MIDI IN ScanCore #19
 
 * Added "Sustain", "Sostenuto" and "All Notes Off" accepted MIDI commands, MIDI ScanCore #19 only!
