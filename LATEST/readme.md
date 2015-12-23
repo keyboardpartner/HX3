@@ -3,6 +3,26 @@ HX3 Latest Firmware
 
 <b>Working releases for update with HX3 Remote application</b>
 
+### Update Packages for Customer
+
+New: Complete update packages for most common HX3 instruments for a hassle-free update to newest version. 
+The ZIPs Flash_*.zip contain only the files needed for your instrument. You don't need the other HX3 stuff offered here.
+For example, if you own a HX3 MIDI Expander Plexi, download Flash_Expander_mk3_4.zip. It countains the new <b>HX3 Flash utility</b> which
+will run a complete update free of doubt.
+
+Following update packages are available:
+
+* Flash_DrawbarExpander - for new HX3 DrawbarExpander
+* Flash_Expander_mk2 - for HX3 MIDI Expander, older mk2 version
+* Flash_Expander_mk3_4 - for HX3 MIDI Expander Plexi USB, current mk3/mk4 versions
+* Flash_OrganMag - for MAG custom organs. Has different drawbar tapering
+* Flash_OrganStandard_mk2 - for HX3 standard organ installations, older mk2 board
+* Flash_OrganStandard_mk3_4 - for HX3 standard organ installations, current mk3/mk4 versions
+* Flash_OrganUhl - for Uhl Instruments X-2 and X-3 organs
+* Flash_XB2_mk3 - for newer XB2 kits (stereo rotary sim) with mk3/mk4 boards
+
+### Update Packages for OEM/Developers/Technicians
+
 Copy and unzip single ZIP files or whole contents of this repo (full download link: 
 https://github.com/heise/HOAX/archive/master.zip) to a new folder on your hard disk, for example E:\HX3\LATEST\. See 
 http://wiki.keyboardpartner.de/index.php?title=HX3_Update_Application for details on update procedure. From
@@ -12,17 +32,27 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 
 ### Last Build
 
-* HX3 Remote: #3.83 .exe for Windows XP and up
-* HX3 Flash: #3.8   .exe for Windows XP and up
+* HX3 Remote: #3.9  .exe for Windows XP and up
+* HX3 Flash: #3.9   .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
-* AVR:  #3.851      .hex and .eep files, latest firmware for AVR controller
-* FPGA: #27112015   .bit configuration file for FPGA update
-* SCAN: #17         .dat ScanCore files, #19 for MIDI input and XB2
+* AVR:  #3.90       .hex and .eep files, latest firmware for AVR controller
+* FPGA: #20122015   .bit configuration file for FPGA update
+* SCAN: #17         .dat ScanCore files, #20 for MIDI input and #19 for XB2
 
 
 ### Changelog
 
-<b>12/20/2015</b> Firmware #3.90 PRELIMINARY, FPGA 27112015, MIDI IN ScanCore #20
+<b>12/23/2015</b> Firmware #3.90, FPGA 20122015, HX3 Remote #3.9, HX3 Flash #3.9
+
+* Complete update ZIPs for most common HX3 instruments
+* Fixed several minor bugs in HX3 Remote in HX3 Flash
+* Last changes to Firmware #3.9
+* HX3 Flash now uses configuration file "hx3_flash_config.ini" which describes files and parameters to change/update. 
+* Lesie(R) default file name change to "rotary"
+This text file may be customized by OEMs for their instruments and given to customers as complete package.
+
+
+<b>12/20/2015</b> Firmware #3.90 PRELIMINARY, FPGA 20122015, MIDI IN ScanCore #20
 
 * "Master Volume" menu entry, affects all 4 output signals. Available by pressing encoder knob twice.
 * MIDI ScanCore #20 provides +1 and +2 octave up of lower manual in upper manual split mode. Will be implemented in other scan cores soon.
