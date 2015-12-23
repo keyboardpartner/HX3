@@ -1,12 +1,12 @@
 HX3 Latest Firmware
 ===================
 
-####Working releases for update with HX3 Remote application
+#### Working releases for update with HX3 Remote application
 
-### Update Packages for Customer
+### Update Packages for Customers
 
 New: Complete update packages for most common HX3 instruments for a hassle-free update to newest version. 
-The ZIPs Flash_*.zip contain only the files needed for your instrument. You don't need the other HX3 stuff offered here.
+The ZIPs Flash_XXX.zip contain only the files needed for your instrument. You don't need the other HX3 stuff offered here.
 For example, if you own a **HX3 MIDI Expander Plexi**, download 
 [Flash_Expander_mk3_4.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_Expander_mk3_4.zip?raw=true) and unzip folder to local hard disk.
 It countains the new <b>HX3 Flash utility</b> which will run a complete update free of doubt.
