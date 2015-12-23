@@ -9,7 +9,8 @@ New: Complete update packages for most common HX3 instruments for a hassle-free 
 The ZIPs Flash_XXX.zip contain only the files needed for your instrument. You don't need the other HX3 stuff offered here.
 For example, if you own a **HX3 MIDI Expander Plexi**, download 
 **[Flash_Expander_mk3_4.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_Expander_mk3_4.zip?raw=true)** and unzip folder to local hard disk.
-It countains the new <b>HX3 Flash utility</b> which will run a complete update free of doubt.
+It countains the new <b>HX3 Flash utility</b> which will run a complete update free of doubt. 
+See wiki page **[HX3_Update_Application] (http://wiki.keyboardpartner.de/index.php?title=HX3_Update_Application)** for description.
 
 Following update packages are available:
 
@@ -49,9 +50,10 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 * Complete update ZIPs for most common HX3 instruments
 * Fixed several minor bugs in HX3 Remote in HX3 Flash
 * Last changes to Firmware #3.9
-* HX3 Flash now uses configuration file "hx3_flash_config.ini" which describes files and parameters to change/update. See comments in one of the INI text files for principle.
-* Leslie(R) default file name changed to "_rotary"
+* HX3 Flash now uses configuration file "hx3_flash_config.ini" which describes files and parameters to change/update. 
+See comments in one of the INI text files for description.
 This text file may be customized by OEMs for their instruments and given to customers as complete package.
+* Leslie(R) default file name changed to "_rotary"
 
 
 <b>12/20/2015</b> Firmware #3.90 PRELIMINARY, FPGA 20122015, MIDI IN ScanCore #20
