@@ -48,9 +48,11 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 <b>12/23/2015</b> Firmware #3.90, FPGA 20122015, HX3 Remote #3.9, HX3 Flash #3.9
 
 * Complete update ZIPs for most common HX3 instruments
-* Fixed several minor bugs in HX3 Remote in HX3 Flash
-* Last changes to Firmware #3.9
-* HX3 Flash now uses configuration file "hx3_flash_config.ini" which describes files and parameters to change/update. OEM only: This text file may be customized by OEMs for their instruments and given to customers as complete package.
+* Last minor changes to Firmware #3.9
+* Fixed several minor bugs in HX3 Remote and HX3 Flash
+* Added "Reset File Info" in HX3 Remote to prevent missing files error
+* OEM only: HX3 Flash now uses configuration file "hx3_flash_config.ini" which describes files and parameters to change/update. This text file may be customized by OEMs for their instruments and given to customers as complete package.
+* OEM only: Added personal serial number file handling for production
 * Leslie(R) default file name changed to "_rotary"
 
 
