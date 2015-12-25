@@ -50,9 +50,7 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 * Complete update ZIPs for most common HX3 instruments
 * Fixed several minor bugs in HX3 Remote in HX3 Flash
 * Last changes to Firmware #3.9
-* HX3 Flash now uses configuration file "hx3_flash_config.ini" which describes files and parameters to change/update. 
-See comments in one of the INI text files for description.
-This text file may be customized by OEMs for their instruments and given to customers as complete package.
+* HX3 Flash now uses configuration file "hx3_flash_config.ini" which describes files and parameters to change/update. OEM only: This text file may be customized by OEMs for their instruments and given to customers as complete package.
 * Leslie(R) default file name changed to "_rotary"
 
 
