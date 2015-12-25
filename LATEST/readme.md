@@ -47,6 +47,7 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 
 <b>12/23/2015</b> Firmware #3.90, FPGA 20122015, HX3 Remote #3.9, HX3 Flash #3.9
 
+* Moved older firmwares to ARCHIVED_FIRMW directory
 * Complete update ZIPs for most common HX3 instruments
 * Last minor changes to Firmware #3.9
 * Fixed several minor bugs in HX3 Remote and HX3 Flash
