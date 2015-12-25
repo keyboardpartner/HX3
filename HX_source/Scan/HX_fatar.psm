@@ -15,7 +15,7 @@
 ; Je nach Tastaturumfang sind anzupassen:
 c_midi_minofs     EQU   2                         ; MIDI-On-Dynamik-Offset (empirisch ermittelt), 7 für Opto, 2 für Fatar Mx
 c_corevers        EQU   $51                       ; $50=SR4014, $51=Fatar, $52=Opto, $53=MIDI RcvOnly
-c_corerevi        EQU   $16                       ; Revisionsnummer
+c_corerevi        EQU   $17                       ; Revisionsnummer
 
 ; mit Assemblierung DAT-Datei für XMODEM-Upload erstellen
                   MEM   "HX_fatar.mem"
@@ -1234,7 +1234,15 @@ midi_dispatch_all:
                   COMP  s1, s0                    ; eingestellter Kanal +2?
                   RET   NZ                        ; Kanal nicht für uns, verwerfen
 
-midi_dispatch_onoff_pedal: 
+midi_dispatch_pedal:
+                  FETCH s0, s_midi_cmd_masked
+                  COMP  s0, $90                   ; MIDI-NoteOn/NoteOff-Befehle
+                  JUMP  Z, midi_dispatch_onoff_pedal
+                  COMP  s0, $80                   ; MIDI-NoteOn/NoteOff-Befehle
+                  JUMP  Z, midi_dispatch_onoff_pedal
+                  JUMP  midi_dispatch_rest        ; wenn kein ON/OFF
+
+midi_dispatch_onoff_pedal:
 ; MIDI-NoteOn/NoteOff-Befehle
                   LOAD  manual_select, 2
                   FETCH s0, s_midi_data2          ; Dynamik dieser Taste
