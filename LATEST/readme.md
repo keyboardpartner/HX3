@@ -15,8 +15,8 @@ See wiki page **[HX3_Update_Application] (http://wiki.keyboardpartner.de/index.p
 Following update packages are available:
 
 * **[Flash_DrawbarExpander.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_DrawbarExpander.zip?raw=true)** - for new HX3 DrawbarExpander
-* **[Flash_Expander_mk2.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_ExpanderPlexi_mk2.zip?raw=true)** - for HX3 MIDI Expander Plexi, older mk2 version
-* **[Flash_Expander_mk3_4.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_ExpanderPlexi_mk3_4.zip?raw=true)** - for HX3 MIDI Expander Plexi USB, current mk3/mk4 versions
+* **[Flash_ExpanderPlexi_mk2.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_ExpanderPlexi_mk2.zip?raw=true)** - for HX3 MIDI Expander Plexi, older mk2 version
+* **[Flash_ExpanderPlexi_mk3_4.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_ExpanderPlexi_mk3_4.zip?raw=true)** - for HX3 MIDI Expander Plexi USB, current mk3/mk4 versions
 * **[Flash_OrganMag.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_OrganMag.zip?raw=true)** - for MAG custom organs. Has different drawbar tapering
 * **[Flash_OrganStandard_mk2.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_OrganStandard_mk2.zip?raw=true)** - for HX3 standard organ installations, older mk2 board
 * **[Flash_OrganStandard_mk3_4.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_OrganStandard_mk3_4.zip?raw=true)** - for HX3 standard organ installations, current mk3/mk4 versions
