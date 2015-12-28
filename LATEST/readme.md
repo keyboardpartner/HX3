@@ -7,7 +7,7 @@ HX3 Latest Firmware
 
 New: Complete update packages for most common HX3 instruments for a hassle-free update to newest version. 
 The ZIPs Flash_XXX.zip contain only the files needed for your instrument. 
-You don't need the other HX3 stuff offered here, just make sure you use **only the new files** contained in ZIP package.
+You don't need the other HX3 stuff offered here, just make sure you use **only the new files and HX3 Flash utility** contained in dedicated ZIP package.
 For example, if you own a **HX3 MIDI Expander Plexi**, download 
 **[Flash_ExpanderPlexi_mk3_4.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_ExpanderPlexi_mk3_4.zip?raw=true)** and unzip folder to local hard disk.
 It countains the new <b>HX3 Flash utility</b> which will run a complete update free of doubt. 
@@ -16,7 +16,7 @@ See wiki page **[HX3_Update_Application] (http://wiki.keyboardpartner.de/index.p
 Following update packages are available:
 
 * **[Flash_DrawbarExpander.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_DrawbarExpander.zip?raw=true)** - for new HX3 DrawbarExpander
-* **[Flash_ExpanderPlexi_mk2.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_ExpanderPlexi_mk2.zip?raw=true)** - for HX3 MIDI Expander Plexi, older mk2 version
+* **[Flash_ExpanderPlexi_mk2.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_ExpanderPlexi_mk2.zip?raw=true)** - for HX3 MIDI Expander Plexi, older mk2 version (up to 1/2014)
 * **[Flash_ExpanderPlexi_mk3_4.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_ExpanderPlexi_mk3_4.zip?raw=true)** - for HX3 MIDI Expander Plexi USB, current mk3/mk4 versions
 * **[Flash_OrganMag.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_OrganMag.zip?raw=true)** - for MAG custom organs. Has different drawbar tapering
 * **[Flash_OrganStandard_mk2.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_OrganStandard_mk2.zip?raw=true)** - for HX3 standard organ installations, older mk2 board
@@ -45,6 +45,11 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 
 
 ### Changelog
+
+<b>12/28/2015</b> Firmware #3.90, FPGA 20122015, HX3 Remote #3.9, HX3 Flash #3.9
+
+* returned to full menus on ExpanderPlexi and DrawbarExpander as some people do not have access to Windows PCs.
+* fixed a bug that updated user name to "Hans Wurst". Sorry about that!
 
 <b>12/23/2015</b> Firmware #3.90, FPGA 20122015, HX3 Remote #3.9, HX3 Flash #3.9
 
