@@ -1,12 +1,9 @@
 HX3 Beta Firmware
 =================
 
-#### BETA releases for update with HX3 Remote application
-
 ### Update Packages FOR BETA TESTERS ONLY
 
-These packages are not intended for customer installation. Use at your own risk. 
-The ZIPs Flash_XXX.zip contain only the files needed for your instrument. Do only use files contained in ZIP package.
+These packages are not intended for customer installation. Use at your own risk. Do only use files contained in self-contained ZIP package.
 
 Following update packages are available:
 
