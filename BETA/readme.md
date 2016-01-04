@@ -21,10 +21,9 @@ Following update packages are available:
 * HX3 Remote: #3.9  .exe for Windows XP and up
 * HX3 Flash: #3.9   .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
-* AVR:  #3.90       .hex and .eep files, latest firmware for AVR controller
-* FPGA: #20122015   .bit configuration file for FPGA update
-* SCAN: #21         .dat ScanCore files, #20 for MIDI input and #19 for XB2
-
+* AVR:  #3.91       .hex and .eep files, latest firmware for AVR controller
+* FPGA: #01022016   .bit configuration file for FPGA update
+* SCAN: #21         .dat ScanCore files for MIDI and FATAR
 
 ### Changelog
 
@@ -36,6 +35,6 @@ Following update packages are available:
 * Sorted menus in a more convenient order
 * Added keyboard split options: Lower to Upper +1 or +2 octaves for single manual instruments
 * Editable split point by menu
-* Added "Tabs saved to Preset" on/off menu entry
+* Added "Tabs saved to Preset" ON/OFF menu entry
 * Fixed several minor bugs
 * Cleaned up "Defaults Parameters" save, no longer partly saved to presets - distracted customers
