@@ -30,10 +30,12 @@ Following update packages are available:
 
 <b>01/04/2016</b> Firmware #3.91, FPGA 01022016
 
-* New rotor simulation, improved throb
-* Added keyboard split options: Lower to Upper +1 or +2 octaves for single manual instruments
+* New rotor simulation, improved throb and improved woofer response
 * Added parameter and menu for treble boost with Vibrato/Chorus ON
 * Returned to full menus as some people do not have access to Windows PCs 
 * Sorted menus in a more convenient order
-* fixed several minor bugs
-
+* Added keyboard split options: Lower to Upper +1 or +2 octaves for single manual instruments
+* Editable split point by menu
+* Added "Tabs saved to Preset" on/off menu entry
+* Fixed several minor bugs
+* Cleaned up "Defaults Parameters" save, no longer partly saved to presets - distracted customers
