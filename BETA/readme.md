@@ -35,3 +35,4 @@ Following update packages are available:
 * Added "Tabs saved to Preset" ON/OFF menu entry
 * Fixed several minor bugs
 * Cleaned up "Defaults Parameters" save, no longer partly saved to presets - distracted customers
+* Added "Sustain via MIDI" feature to FATAR and XB2 ScanCore. "Sustain/Sostenuto via MIDI" available on MIDI ScanCore only.
