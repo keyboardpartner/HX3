@@ -3,7 +3,9 @@ HX3 Beta Firmware
 
 ### Update Packages FOR BETA TESTERS ONLY
 
-These packages are not intended for customer installation. Use at your own risk. Do only use files contained in self-contained ZIP package.
+These packages are not intended for customer installation. May contain serious 
+bugs. Use at your own risk. Do only use files contained in self-contained ZIP 
+package.
 
 Following update packages are available:
 
@@ -24,6 +26,10 @@ Following update packages are available:
 
 ### Changelog
 
+<b>01/05/2016</b> Firmware #3.91, FPGA 01022016
+
+* fixed some bugs in beta FW: Menu entries, defaults saving 
+
 <b>01/04/2016</b> Firmware #3.91, FPGA 01022016
 
 * New rotor simulation, improved throb and improved woofer response
@@ -33,6 +39,5 @@ Following update packages are available:
 * Added keyboard split options: Lower to Upper +1 or +2 octaves for single manual instruments
 * Editable split point by menu
 * Added "Tabs saved to Preset" ON/OFF menu entry
-* Fixed several minor bugs
 * Cleaned up "Defaults Parameters" save, no longer partly saved to presets - distracted customers
 * Added "Sustain via MIDI" feature to FATAR and XB2 ScanCore. "Sustain/Sostenuto via MIDI" available on MIDI ScanCore only.
