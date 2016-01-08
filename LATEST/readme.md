@@ -43,20 +43,27 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 <b>01/05/2016</b> Firmware #3.91, FPGA 01022016, HX3 Remote #3.91
 
-* New rotor simulation, vastly improved throb and woofer response
-* Returned to full menus as some people do not have access to Windows PCs 
-* Common Presets save split point, split mode and Reverb/Config/Split tabs
+* New rotor simulation, improved throb and woofer response
+* Returned to full menus as some people do not have access to Windows PCs
+* Sorted menus in a more convenient order
+* Common Presets (available on organs only) save split point, split mode and Reverb/Config/Split tabs
 * Added keyboard split options: Lower to Upper +1 or +2 octaves for single manual instruments (for MIDI/FATAR)
 * Added parameter and menu for treble boost with Vibrato/Chorus ON
 * Added "Tabs saved to Preset" ON/OFF menu entry, percussion and vibrato settings will be saved to upper/lower presets if ON
-* Fixed missing entries in HX3 Remote MIDI Custom CCs (Vibrato etc)
-* Fixed some bugs in beta FW: Menu entries, defaults saving 
-* Sorted menus in a more convenient order
 * Editable split point by menu
+* Fixed missing entries in HX3 Remote MIDI Custom CCs (Vibrato etc)
+* Fixed "scratching noise" when swell controlled by MIDI
 * Cleaned up "Defaults Parameters" save, no longer partly saved to presets - distracted customers
 * Added "Sustain via MIDI" feature to FATAR and XB2 ScanCore. "Sustain/Sostenuto via MIDI" available on MIDI ScanCore only.
 * Returned to full menus as some people do not have access to Windows PCs
 * Fixed a bug that updated user name to "Hans Wurst". Sorry about that!
+* Fixed lots of minor bugs and glitches
+* Updated HX3 Flash, may be "scripted" and customized by OEM/technicians for own organ projects
+* Updated HX3 Remote, fixed some file export/import bugs
+
+TO DO:
+
+* Implementing improved split options in ScanCores for OrganScan61 and Scan16.
 * Known bug in HX3 Remote: Sometimes issues an "invalid Integer" error on startup. Just ignore.
 
 <b>12/23/2015</b> Firmware #3.90, FPGA 20122015, HX3 Remote #3.9, HX3 Flash #3.9
