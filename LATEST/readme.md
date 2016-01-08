@@ -24,13 +24,11 @@ See wiki page **[HX3_Update_Application] (http://wiki.keyboardpartner.de/index.p
 * **[Flash_OrganUhl.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_OrganUhl.zip?raw=true)** - for Uhl Instruments X-2 and X-3 organs
 * **[Flash_XB2_mk3.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_XB2_mk3.zip?raw=true)** - for newer XB2 kits (stereo rotary sim) with mk3/mk4 boards
 
-### Update Packages for OEM/Developers/Technicians
+### Update Packages for OEM/Developers/Technicians/Advanced Users
 
-Copy and unzip single ZIP files or whole contents of this repo (full download link: 
-https://github.com/heise/HOAX/archive/master.zip) to a new folder on your hard disk, for example E:\HX3\LATEST\. See 
-http://wiki.keyboardpartner.de/index.php?title=HX3_Update_Application for details on update procedure. From
-03/2015, ZIP files will contain all necessary files (including FPGA, AVR and ScanCores) plus appropriate HX3 Remote/Update for 
-mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
+Copy and unzip HX3_firmw_XXX.zip to a new folder on your hard disk, for example 
+E:\HX3\LATEST\. See http://wiki.keyboardpartner.de/index.php?title=HX3_Update_Application for 
+details on update procedure. Scroll to bottom of page for file usage.
 
 ### Last Build
 
@@ -57,9 +55,8 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 * Editable split point by menu
 * Cleaned up "Defaults Parameters" save, no longer partly saved to presets - distracted customers
 * Added "Sustain via MIDI" feature to FATAR and XB2 ScanCore. "Sustain/Sostenuto via MIDI" available on MIDI ScanCore only.
-* returned to full menus on ExpanderPlexi and DrawbarExpander as some people do not have access to Windows PCs.
-* fixed a bug that updated user name to "Hans Wurst". Sorry about that!
-
+* Returned to full menus as some people do not have access to Windows PCs
+* Fixed a bug that updated user name to "Hans Wurst". Sorry about that!
 * Known bug in HX3 Remote: Sometimes issues an "invalid Integer" error on startup. Just ignore.
 
 <b>12/23/2015</b> Firmware #3.90, FPGA 20122015, HX3 Remote #3.9, HX3 Flash #3.9
