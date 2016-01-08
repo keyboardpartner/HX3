@@ -11,9 +11,9 @@ You don't need the other HX3 stuff offered here, just make sure you use **only t
 For example, if you own a **HX3 MIDI Expander Plexi**, download 
 **[Flash_ExpanderPlexi_mk3_4.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_ExpanderPlexi_mk3_4.zip?raw=true)** and unzip folder to local hard disk.
 It countains the new <b>HX3 Flash utility</b> which will run a complete update free of doubt. 
-See wiki page **[HX3_Update_Application] (http://wiki.keyboardpartner.de/index.php?title=HX3_Update_Application)** for description.
+See wiki page **[HX3_Update_Application] (http://wiki.keyboardpartner.de/index.php?title=HX3_Update_Application)** for description. Following update packages are available:
 
-Following update packages are available:
+### Firmware #3.91 Update Packages
 
 * **[Flash_DrawbarExpander.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_DrawbarExpander.zip?raw=true)** - for new HX3 DrawbarExpander
 * **[Flash_ExpanderPlexi_mk2.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_ExpanderPlexi_mk2.zip?raw=true)** - for HX3 MIDI Expander Plexi, older mk2 version (up to 1/2014)
@@ -24,7 +24,6 @@ Following update packages are available:
 * **[Flash_OrganUhl.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_OrganUhl.zip?raw=true)** - for Uhl Instruments X-2 and X-3 organs
 * **[Flash_XB2_mk3.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_XB2_mk3.zip?raw=true)** - for newer XB2 kits (stereo rotary sim) with mk3/mk4 boards
 
-
 ### Update Packages for OEM/Developers/Technicians
 
 Copy and unzip single ZIP files or whole contents of this repo (full download link: 
@@ -33,23 +32,35 @@ http://wiki.keyboardpartner.de/index.php?title=HX3_Update_Application for detail
 03/2015, ZIP files will contain all necessary files (including FPGA, AVR and ScanCores) plus appropriate HX3 Remote/Update for 
 mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 
-
 ### Last Build
 
-* HX3 Remote: #3.9  .exe for Windows XP and up
+* HX3 Remote: #3.91 .exe for Windows XP and up
 * HX3 Flash: #3.9   .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
-* AVR:  #3.90       .hex and .eep files, latest firmware for AVR controller
-* FPGA: #20122015   .bit configuration file for FPGA update
-* SCAN: #17         .dat ScanCore files, #20 for MIDI input and #19 for XB2
-
+* AVR:  #3.91       .hex and .eep files, latest firmware for AVR controller
+* FPGA: #01022016   .bit configuration file for FPGA update
+* SCAN: #21         .dat ScanCore files for MIDI and FATAR
 
 ### Changelog
 
-<b>12/28/2015</b> Firmware #3.90, FPGA 20122015, HX3 Remote #3.9, HX3 Flash #3.9
+<b>01/05/2016</b> Firmware #3.91, FPGA 01022016, HX3 Remote #3.91
 
+* New rotor simulation, vastly improved throb and woofer response
+* Returned to full menus as some people do not have access to Windows PCs 
+* Common Presets save split point, split mode and Reverb/Config/Split tabs
+* Added keyboard split options: Lower to Upper +1 or +2 octaves for single manual instruments (for MIDI/FATAR)
+* Added parameter and menu for treble boost with Vibrato/Chorus ON
+* Added "Tabs saved to Preset" ON/OFF menu entry, percussion and vibrato settings will be saved to upper/lower presets if ON
+* Fixed missing entries in HX3 Remote MIDI Custom CCs (Vibrato etc)
+* Fixed some bugs in beta FW: Menu entries, defaults saving 
+* Sorted menus in a more convenient order
+* Editable split point by menu
+* Cleaned up "Defaults Parameters" save, no longer partly saved to presets - distracted customers
+* Added "Sustain via MIDI" feature to FATAR and XB2 ScanCore. "Sustain/Sostenuto via MIDI" available on MIDI ScanCore only.
 * returned to full menus on ExpanderPlexi and DrawbarExpander as some people do not have access to Windows PCs.
 * fixed a bug that updated user name to "Hans Wurst". Sorry about that!
+
+* Known bug in HX3 Remote: Sometimes issues an "invalid Integer" error on startup. Just ignore.
 
 <b>12/23/2015</b> Firmware #3.90, FPGA 20122015, HX3 Remote #3.9, HX3 Flash #3.9
 
@@ -61,10 +72,6 @@ mk2 as well as mk3/mk4 boards. Scroll to bottom of page for file usage.
 * OEM only: HX3 Flash now uses configuration file "hx3_flash_config.ini" which describes files and parameters to change/update. This text file may be customized by OEMs for their instruments and given to customers as complete package.
 * OEM only: Added personal serial number file handling for production
 * Leslie(R) default file name changed to "_rotary"
-
-
-<b>12/20/2015</b> Firmware #3.90 PRELIMINARY, FPGA 20122015, MIDI IN ScanCore #20
-
 * "Master Volume" menu entry, affects all 4 output signals. Available by pressing encoder knob twice.
 * MIDI ScanCore #20 provides +1 and +2 octave up of lower manual in upper manual split mode. Will be implemented in other scan cores soon.
 * Emphasised "throb" in rotary horn simulation with FPGA #20122015
