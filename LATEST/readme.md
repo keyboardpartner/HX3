@@ -41,10 +41,11 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 ### Changelog
 
-<b>01/10/2016</b>Firmware #3.911 (XB2 kit only)
+<b>01/10/2016</b>Firmware #3.911
 
 * Vibrato/Chorus display bugfix (XB2 kit only)
 * Leakage/Output configuration bugfix (XB2 kit only)
+* Corrected hx3_flash_config.ini for mk3/mk4 standard organs (affects Flash_OrganStandard_mk3_4.zip only)
 
 <b>01/05/2016</b> Firmware #3.91, FPGA 01022016, HX3 Remote #3.91
 
