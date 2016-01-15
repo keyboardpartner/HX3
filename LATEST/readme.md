@@ -41,6 +41,10 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 ### Changelog
 
+<b>01/15/2016</b>Firmware #3.912
+
+* Fixed rounding error on some parameters in MIDI custom CC set (HX3 Expander only)
+
 <b>01/10/2016</b>Firmware #3.911
 
 * Vibrato/Chorus display bugfix (XB2 kit only)
