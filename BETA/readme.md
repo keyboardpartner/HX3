@@ -30,6 +30,7 @@ Following update packages are available:
 * new filter and adder design, less prone to overflow distortions
 * higher bass and organ output levels
 * lowering of rotary defaults parameter #607 to values below 155 may be required
+* added version for old XB2 mk2 kit. Rotary output jack and headphone amp must be rewired to obtain stereo simulation
 
 <b>01/05/2016</b> Firmware #3.91, FPGA 01022016
 
