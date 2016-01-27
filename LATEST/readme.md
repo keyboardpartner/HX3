@@ -21,7 +21,6 @@ See wiki page **[HX3_Update_Application] (http://wiki.keyboardpartner.de/index.p
 * **[Flash_OrganMag.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_OrganMag.zip?raw=true)** - for MAG custom organs. Has different drawbar tapering
 * **[Flash_OrganStandard_mk2.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_OrganStandard_mk2.zip?raw=true)** - for HX3 standard organ installations, older mk2 board
 * **[Flash_OrganStandard_mk3_4.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_OrganStandard_mk3_4.zip?raw=true)** - for HX3 standard organ installations, current mk3/mk4 versions
-* **[Flash_OrganUhl.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_OrganUhl.zip?raw=true)** - for Uhl Instruments X-2 and X-3 organs
 * **[Flash_XB2_mk3.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_XB2_mk3.zip?raw=true)** - for newer XB2 kits (stereo rotary sim) with mk3/mk4 boards
 
 ### Update Packages for OEM/Developers/Technicians/Advanced Users
