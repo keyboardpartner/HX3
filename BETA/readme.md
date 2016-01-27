@@ -26,6 +26,12 @@ Following update packages are available:
 
 ### Changelog
 
+<b>01/27/2016</b> Firmware #3.91, FPGA 27022016
+
+* new filter design, less prone to overflow distortions
+* higher bass and organ output levels
+* lowering of rotary defaults parameter #607 to values below 155 may be required
+
 <b>01/05/2016</b> Firmware #3.91, FPGA 01022016
 
 * fixed some bugs in beta FW: Menu entries, defaults saving 
