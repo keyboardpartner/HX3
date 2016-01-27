@@ -13,7 +13,6 @@ Following update packages are available:
 * **[Flash_ExpanderPlexi_mk3_4.zip] (https://github.com/keyboardpartner/HX3/blob/master/BETA/Flash_ExpanderPlexi_mk3_4.zip?raw=true)** - for HX3 MIDI Expander Plexi USB, current mk3/mk4 versions
 * **[Flash_OrganMag.zip] (https://github.com/keyboardpartner/HX3/blob/master/BETA/Flash_OrganMag.zip?raw=true)** - for MAG custom organs. Has different drawbar tapering
 * **[Flash_OrganStandard_mk3_4.zip] (https://github.com/keyboardpartner/HX3/blob/master/BETA/Flash_OrganStandard_mk3_4.zip?raw=true)** - for HX3 standard organ installations, current mk3/mk4 versions
-* **[Flash_OrganUhl.zip] (https://github.com/keyboardpartner/HX3/blob/master/BETA/Flash_OrganUhl.zip?raw=true)** - for Uhl Instruments X-2 and X-3 organs
 
 ### Last Build
 
@@ -21,14 +20,14 @@ Following update packages are available:
 * HX3 Flash: #3.9   .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
 * AVR:  #3.91       .hex and .eep files, latest firmware for AVR controller
-* FPGA: #01022016   .bit configuration file for FPGA update
+* FPGA: #27022016   .bit configuration file for FPGA update
 * SCAN: #21         .dat ScanCore files for MIDI and FATAR
 
 ### Changelog
 
 <b>01/27/2016</b> Firmware #3.91, FPGA 27022016
 
-* new filter design, less prone to overflow distortions
+* new filter and adder design, less prone to overflow distortions
 * higher bass and organ output levels
 * lowering of rotary defaults parameter #607 to values below 155 may be required
 
