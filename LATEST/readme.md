@@ -35,7 +35,7 @@ details on update procedure. Scroll to bottom of page for file usage.
 * HX3 Flash: #3.9   .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
 * AVR:  #3.91       .hex and .eep files, latest firmware for AVR controller
-* FPGA: #27022016   .bit configuration file for FPGA update
+* FPGA: #27012016   .bit configuration file for FPGA update
 * SCAN: #21         .dat ScanCore files for MIDI and FATAR
 
 ### Changelog
@@ -43,14 +43,10 @@ details on update procedure. Scroll to bottom of page for file usage.
 <b>01/27/2016</b> Firmware #3.912, FPGA 27022016
 
 * new filter and adder design, less prone to overflow distortions
-* higher bass and organ output levels
+* higher bass and organ output levels, lowering of rotary defaults parameter #607 to values below 155 may be required
 * new triode sim in AO28 block
-* lowering of rotary defaults parameter #607 to values below 155 may be required
 * added version for old XB2 mk2 kit. Rotary output jack and headphone amp must be rewired to obtain stereo simulation
-
-<b>01/05/2016</b> Firmware #3.912, FPGA 01022016
-
-* fixed some bugs in beta FW: Menu entries, defaults saving 
+* fixed some bugs in beta FW: Menu entries, defaults saving, factory reset menu entry 
 * Fixed rounding error on some parameters in MIDI custom CC set (HX3 Expander only)
 
 <b>01/10/2016</b>Firmware #3.911
