@@ -19,31 +19,10 @@ Following update packages are available:
 * HX3 Remote: #3.9  .exe for Windows XP and up
 * HX3 Flash: #3.9   .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
-* AVR:  #3.91       .hex and .eep files, latest firmware for AVR controller
+* AVR:  #3.912      .hex and .eep files, latest firmware for AVR controller
 * FPGA: #27022016   .bit configuration file for FPGA update
 * SCAN: #21         .dat ScanCore files for MIDI and FATAR
 
 ### Changelog
 
-<b>01/27/2016</b> Firmware #3.91, FPGA 27022016
-
-* new filter and adder design, less prone to overflow distortions
-* higher bass and organ output levels
-* lowering of rotary defaults parameter #607 to values below 155 may be required
-* added version for old XB2 mk2 kit. Rotary output jack and headphone amp must be rewired to obtain stereo simulation
-
-<b>01/05/2016</b> Firmware #3.91, FPGA 01022016
-
-* fixed some bugs in beta FW: Menu entries, defaults saving 
-
-<b>01/04/2016</b> Firmware #3.91, FPGA 01022016
-
-* New rotor simulation, improved throb and improved woofer response
-* Added parameter and menu for treble boost with Vibrato/Chorus ON
-* Returned to full menus as some people do not have access to Windows PCs 
-* Sorted menus in a more convenient order
-* Added keyboard split options: Lower to Upper +1 or +2 octaves for single manual instruments
-* Editable split point by menu
-* Added "Tabs saved to Preset" ON/OFF menu entry
-* Cleaned up "Defaults Parameters" save, no longer partly saved to presets - distracted customers
-* Added "Sustain via MIDI" feature to FATAR and XB2 ScanCore. "Sustain/Sostenuto via MIDI" available on MIDI ScanCore only.
+(moved finalized files to LATEST directory)
