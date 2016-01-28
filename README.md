@@ -1,5 +1,5 @@
-HX3 Hammond Clone
-=================
+HX3 Clonewheel Organ
+====================
 
 (Scroll to bottom for english description) 
 
