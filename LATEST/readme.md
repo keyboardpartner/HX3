@@ -40,13 +40,13 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 ### Changelog
 
-<b>01/27/2016</b> Firmware #3.912, FPGA 27022016
+<b>01/27/2016</b> Firmware #3.912, FPGA 27012016
 
-* new filter and adder design, less prone to overflow distortions
-* higher bass and organ output levels, lowering of rotary defaults parameter #607 to values below 155 may be required
-* new triode sim in AO28 block
-* added version for old XB2 mk2 kit. Rotary output jack and headphone amp must be rewired to obtain stereo simulation
-* fixed some bugs in beta FW: Menu entries, defaults saving, factory reset menu entry 
+* New filter and adder design, less prone to overflow distortions
+* Higher bass and organ output levels, lowered rotary defaults parameter #607 to value 150
+* New triode simulation in AO28 block - try the AO28 tube age parameter
+* Added version for old XB2 mk2 kit. Rotary output jack and headphone amp must be rewired to obtain stereo simulation
+* Fixed some bugs in beta FW: Menu entries, defaults saving, factory reset 
 * Fixed rounding error on some parameters in MIDI custom CC set (HX3 Expander only)
 
 <b>01/10/2016</b>Firmware #3.911
