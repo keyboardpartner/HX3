@@ -50,6 +50,7 @@ details on update procedure. Scroll to bottom of page for file usage.
 * Fixed rounding error on some parameters in MIDI custom CC set
 * Extended transpose range plus/minus 2 octaves (FatarScan, MIDI input)
 * Foldback for notes outside of 5 octaves keyboard range (FatarScan, MIDI input)
+* Fixed MIDI channel bug, only worked on MIDI CH 1
 
 <b>01/10/2016</b>Firmware #3.911
 
