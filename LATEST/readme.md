@@ -13,7 +13,7 @@ For example, if you own a **HX3 MIDI Expander Plexi**, download
 It countains the new <b>HX3 Flash utility</b> which will run a complete update free of doubt. 
 See wiki page **[HX3_Update_Application] (http://wiki.keyboardpartner.de/index.php?title=HX3_Update_Application)** for description. Following update packages are available:
 
-### Firmware #3.91 Update Packages
+### Firmware #3.92 Update Packages
 
 * **[Flash_DrawbarExpander.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_DrawbarExpander.zip?raw=true)** - for new HX3 DrawbarExpander
 * **[Flash_ExpanderPlexi_mk2.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_ExpanderPlexi_mk2.zip?raw=true)** - for HX3 MIDI Expander Plexi, older mk2 version (up to 1/2014)
@@ -31,7 +31,7 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 ### Last Build
 
-* HX3 Remote: #3.9  .exe for Windows XP and up
+* HX3 Remote: #3.922  .exe for Windows XP and up
 * HX3 Flash: #3.9   .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
 * AVR:  #3.92       .hex and .eep files, latest firmware for AVR controller
@@ -39,6 +39,19 @@ details on update procedure. Scroll to bottom of page for file usage.
 * SCAN: #22         .dat ScanCore files for MIDI and FATAR
 
 ### Changelog
+
+<b>04/18/2016</b> Firmware #3.922, FPGA 11042016, ScanCores #23
+
+* Fixed bug in "Button Vibrato" version (Drawbar Expander), vibrato LEDs did not change on presets
+* Fixed "weaker lower manual volume" bug
+* Separate TONE and AMP potentiometer enables
+* "Latching Presets" firmware will now mute on CANCEL key, i.e. jump to preset 11
+* Deeper bass pedal sound if pedal sustain off
+* Slightly changed AO28 equalizing for more "bottom" and lower mids
+* Slightly more generator output for full distortion on simulated rotary amp
+* Wider swell pedal range
+* Fixed "Note 25" bug on pedal scan routines
+* MIDI Sustain by CC #64 introduced on all scan cores
 
 <b>01/29/2016</b> Firmware #3.92, FPGA 27012016, ScanCores #22
 
