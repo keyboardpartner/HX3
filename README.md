@@ -13,7 +13,6 @@ Bitte beachten Sie die ausführliche Anleitung auf http://wiki.keyboardpartner.d
 
 * <b>LATEST</b>                    enthält aktuelle Firmware-Pakete<br>
 * <b>DOCS_PDF</b>                  Syntax-Tabelle zur Kommunikation und weitere Unterlagen<br>
-* <b>FPGACORES</b>                 FPGA-Konfiguration, Hallprogramme und Scan-Cores<br>
 * <b>PLATINEN</b>                  Schaltpläne, Bestückungspläne und weitere Unterlagen<br>
 * <b>FOR_OEM</b>                   enthält alle dateien für AVR-Erstprogrammierung, wie oben, jedoch mit eingebautem Bootloader 
 
@@ -21,6 +20,5 @@ Bitte beachten Sie die ausführliche Anleitung auf http://wiki.keyboardpartner.d
 
 * <b>LATEST</b>                    current firmware packages<br>
 * <b>DOCS_PDF</b>                  Syntax table for HX3 COM port, MIDI tables etc. <br>
-* <b>FPGACORES</b>                 FPGA configuration, reverb firmware and keyboard scan cores for upload with TeraTerm macro<br>
 * <b>PLATINEN</b>                  PCB schematics, mechanical drawings, board and component layouts<br>
 * <b>FOR_OEM</b>                   contains all flash files as above, but with built-in bootloader (Arduino/AVRdude compatible). 
