@@ -19,9 +19,11 @@ See wiki page **[HX3_Update_Application] (http://wiki.keyboardpartner.de/index.p
 * **[Flash_ExpanderPlexi_mk2.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_ExpanderPlexi_mk2.zip?raw=true)** - for HX3 MIDI Expander Plexi, older mk2 version (up to 1/2014)
 * **[Flash_ExpanderPlexi_mk3_4.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_ExpanderPlexi_mk3_4.zip?raw=true)** - for HX3 MIDI Expander Plexi USB, current mk3/mk4 versions
 * **[Flash_OrganMag.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_OrganMag.zip?raw=true)** - for MAG custom organs. Has different drawbar tapering
-* **[Flash_OrganStandard_mk2.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_OrganStandard_mk2.zip?raw=true)** - for HX3 standard organ installations, older mk2 board
-* **[Flash_OrganStandard_mk3_4.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_OrganStandard_mk3_4.zip?raw=true)** - for HX3 standard organ installations, current mk3/mk4 versions
 * **[Flash_XB2_mk3.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_XB2_mk3.zip?raw=true)** - for newer XB2 kits (stereo rotary sim) with mk3/mk4 boards
+* **[Flash_XB2_mk2.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_XB2_mk2.zip?raw=true)** - for older XB2 kits (stereo rotary sim) with mk2 boards, needs some hardware mods
+
+Standard organ installations do not have a HX3 Flash package anymore due to many variants. Please use HX3 Remote (contained in complete firmware package) instead.
+
 
 ### Update Packages for OEM/Developers/Technicians/Advanced Users
 
