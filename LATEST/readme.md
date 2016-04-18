@@ -45,6 +45,7 @@ details on update procedure. Scroll to bottom of page for file usage.
 <b>04/18/2016</b> Firmware #3.922, FPGA 11042016, ScanCores #23
 
 * Fixed bug in "Button Vibrato" version (Drawbar Expander), vibrato LEDs did not change on presets
+* Fixed "MIDI Volume" bug in Drawbar Expander, master volume did not change on MIDI CC (although displayed)
 * Fixed "weaker lower manual volume" bug
 * Separate TONE and AMP potentiometer enables
 * "Latching Presets" firmware will now mute on CANCEL key, i.e. jump to preset 11
