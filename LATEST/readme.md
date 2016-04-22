@@ -5,13 +5,13 @@ HX3 Latest Firmware
 
 **Wichtiger Hinweis: Bitte entpacken Sie die ZIP-Files in einen Ordner auf Ihrer lokalen Festplatte. Starten Sie HX3 Flash bzw. HX3 Remote aus diesem Ordner. Beim Start direkt im ZIP-Fenster schlägt das Update fehl.**
 
+**Be sure to extract all files to a local hard disk folder. Update will fail if started directly from ZIP window.**
+
 ### Update Packages for Customers
 
 New: Complete update packages for most common HX3 instruments for a hassle-free update to newest version. 
 The ZIPs Flash_XXX.zip contain only the files needed for your instrument. 
 You don't need the other HX3 stuff offered here, just make sure you use **only the new files and HX3 Flash utility** contained in dedicated ZIP package. 
-
-**Be sure to extract all files to a local hard disk folder. Update will fail if started directly from ZIP window.**
 
 For example, if you own a **HX3 MIDI Expander Plexi**, download 
 **[Flash_ExpanderPlexi_mk3_4.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_ExpanderPlexi_mk3_4.zip?raw=true)** and unzip folder to local hard disk.
