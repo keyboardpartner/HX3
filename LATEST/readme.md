@@ -9,7 +9,7 @@ New: Complete update packages for most common HX3 instruments for a hassle-free 
 The ZIPs Flash_XXX.zip contain only the files needed for your instrument. 
 You don't need the other HX3 stuff offered here, just make sure you use **only the new files and HX3 Flash utility** contained in dedicated ZIP package. 
 
-**Be sure to extract all files to your local hard disk. Update will fail if started directly from ZIP window.**
+**Be sure to extract all files to a local hard disk folder. Update will fail if started directly from ZIP window.**
 
 For example, if you own a **HX3 MIDI Expander Plexi**, download 
 **[Flash_ExpanderPlexi_mk3_4.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_ExpanderPlexi_mk3_4.zip?raw=true)** and unzip folder to local hard disk.
