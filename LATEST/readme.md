@@ -3,9 +3,9 @@ HX3 Latest Firmware
 
 #### Working releases for update with HX3 Remote application
 
-**Wichtiger Hinweis: Bitte entpacken Sie die ZIP-Files in einen Ordner auf Ihrer lokalen Festplatte. Starten Sie HX3 Flash bzw. HX3 Remote aus diesem Ordner. Beim Start direkt im ZIP-Fenster schlägt das Update fehl.**
+**WICHTIG: Bitte entpacken Sie die ZIP-Files in einen Ordner auf Ihrer lokalen Festplatte. Starten Sie HX3 Flash bzw. HX3 Remote aus diesem Ordner. Beim Start direkt im ZIP-Fenster schlägt das Update fehl.**
 
-**Be sure to extract all files to a local hard disk folder. Update will fail if started directly from ZIP window.**
+**IMPORTANT: Be sure to extract all files to a local hard disk folder. Update will fail if started directly from ZIP window.**
 
 ### Update Packages for Customers
 
