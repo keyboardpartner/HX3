@@ -18,7 +18,7 @@ For example, if you own a **HX3 MIDI Expander Plexi**, download
 It countains the new <b>HX3 Flash utility</b> which will run a complete update free of doubt. 
 See wiki page **[HX3_Update_Application] (http://wiki.keyboardpartner.de/index.php?title=HX3_Update_Application)** for description. Following update packages are available:
 
-### Firmware #3.922 Update Packages
+### Firmware #3.923 Update Packages
 
 * **[Flash_DrawbarExpander.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_DrawbarExpander.zip?raw=true)** - for new HX3 DrawbarExpander
 * **[Flash_ExpanderPlexi_mk2.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_ExpanderPlexi_mk2.zip?raw=true)** - for HX3 MIDI Expander Plexi, older mk2 version (up to 1/2014)
@@ -47,10 +47,12 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 ### Changelog
 
-<b>04/25/2016</b> Firmware #3.922, HX3 Flash #3.9e
+<b>04/25/2016</b> Firmware #3.923, HX3 Flash #3.9e
 
-* HX3 Flash provides entering of lost licence numbers, will write licence info to text file "hx3_licence_*.txt" and create log file
+* HX3 Flash provides entering of "lost" licence numbers, will create licence info file "hx3_licence_*.txt" and update log file
 * HX3 Flash Reboot bug fixed. HX3 board may be reset by power off/on if boot sequence fails.
+* Revised boot sequence on unfinalized boards to prevent freezes
+* LCD message for firmware update
 
 <b>04/18/2016</b> Firmware #3.922, FPGA 11042016, ScanCores #23
 
