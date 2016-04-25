@@ -39,13 +39,18 @@ details on update procedure. Scroll to bottom of page for file usage.
 ### Last Build
 
 * HX3 Remote: #3.922  .exe for Windows XP and up
-* HX3 Flash: #3.9   .exe for Windows XP and up
+* HX3 Flash: #3.92e .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
 * AVR:  #3.92       .hex and .eep files, latest firmware for AVR controller
 * FPGA: #27012016   .bit configuration file for FPGA update
 * SCAN: #22         .dat ScanCore files for MIDI and FATAR
 
 ### Changelog
+
+<b>04/25/2016</b> Firmware #3.922, HX3 Flash #3.9e
+
+* HX3 Flash provides entering of lost licence numbers, will write licence info to text file "hx3_licence_*.txt" and create log file
+* HX3 Flash Reboot bug fixed. HX3 board may be reset by power off/on if boot sequence fails.
 
 <b>04/18/2016</b> Firmware #3.922, FPGA 11042016, ScanCores #23
 
