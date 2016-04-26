@@ -54,7 +54,7 @@ details on update procedure. Scroll to bottom of page for file usage.
 * Minor bug in HX3 Flash fixed. Now writes last update time & date to file "hx3_licence_XXXXXX.txt" - open it to view your serial numbers
 * Revised boot sequence on unfinalized boards to prevent freezes
 * HX3 Flash provides entering of "lost" licence numbers, will create licence info file "hx3_licence_*.txt" and update log file
-* HX3 Flash Reboot bug fixed. HX3 board may be reset by power off/on if boot sequence fails.
+* HX3 Flash Reboot bug fixed. HX3 board may be reset by power off/on if boot sequence fails
 * LCD message for firmware update
 
 <b>04/18/2016</b> Firmware #3.922, FPGA 11042016, ScanCores #23
