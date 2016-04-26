@@ -38,7 +38,7 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 ### Last Build
 
-* HX3 Remote: #3.922  .exe for Windows XP and up
+* HX3 Remote: #3.924  .exe for Windows XP and up
 * HX3 Flash: #3.92e .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
 * AVR:  #3.92       .hex and .eep files, latest firmware for AVR controller
@@ -47,15 +47,18 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 ### Changelog
 
-<b>04/25/2016</b> Firmware #3.923, HX3 Flash #3.9e
+<b>04/26/2016</b> Firmware #3.924, HX3 Flash #3.9e
 
+* Severe bug in Drawbar Expander firmware fixed, did not respond to Reverb/Split/AB buttons
+* Minor bug in HX3 Flash fixed, writes last update time & date to file "hx3_licence_*.txt"
+* Revised boot sequence on unfinalized boards to prevent freezes
 * HX3 Flash provides entering of "lost" licence numbers, will create licence info file "hx3_licence_*.txt" and update log file
 * HX3 Flash Reboot bug fixed. HX3 board may be reset by power off/on if boot sequence fails.
-* Revised boot sequence on unfinalized boards to prevent freezes
 * LCD message for firmware update
 
 <b>04/18/2016</b> Firmware #3.922, FPGA 11042016, ScanCores #23
 
+* Do not use for drawbar Expander, Reverb button bug introduced
 * Fixed bug in "Button Vibrato" version (Drawbar Expander), vibrato LEDs did not change on presets
 * Fixed "MIDI Volume" bug in Drawbar Expander, master volume did not change on MIDI CC (although displayed)
 * Fixed "weaker lower manual volume" bug
