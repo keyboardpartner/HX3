@@ -16,13 +16,17 @@ Following update packages are available:
 
 ### Last Build
 
-* HX3 Remote: #3.9  .exe for Windows XP and up
-* HX3 Flash: #3.9   .exe for Windows XP and up
+* HX3 Remote: #3.922  .exe for Windows XP and up
+* HX3 Flash: #3.925   .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
-* AVR:  #3.912      .hex and .eep files, latest firmware for AVR controller
-* FPGA: #27022016   .bit configuration file for FPGA update
-* SCAN: #21         .dat ScanCore files for MIDI and FATAR
+* AVR:  #3.925      .hex and .eep files, latest firmware for AVR controller
+* FPGA: #11042016   .bit configuration file for FPGA update
+* SCAN: #30         .dat ScanCore files for MIDI and FATAR
 
 ### Changelog
+
+<b>05/05/2016</b> Firmware #3.925, HX3 Flash #3.9e
+
+* New ScanCore #30 with 88 key support, full transpose 24 notes, upper manual split +1 and +2 octaves on lower part
 
 (moved finalized files to LATEST directory)
