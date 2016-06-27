@@ -25,9 +25,14 @@ Following update packages are available:
 
 ### Changelog
 
+<b>06/27/2016</b> FATAR ScanCore #25
+
+* Added separate update package for FATAR, will update ScanCore only
+* Changed MIDI velocity scaling to triple squared curve
+* "Missing notes" bug fixed
+
 <b>05/05/2016</b> Firmware #3.925, HX3 Flash #3.9e
 
-* Added update package for FATAR #25 ScanCore, changed MIDI velocity scaling, "missing notes" bug fixed
 * New MIDI ScanCore #30 with 88 key support, full transpose 24 notes, upper manual split +1 and +2 octaves on lower part
 * HX3 Remote Dropdown menu bug on Win XP fixed
 * XB2 Kit Transpose with PERCUSSION buttons (SECOND = DOWN, THIRD = UP) when Edit Mode ON
