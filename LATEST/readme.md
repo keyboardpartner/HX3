@@ -62,6 +62,7 @@ details on update procedure. Scroll to bottom of page for file usage.
 * Updated HX3 Remote and HX3 Flash
 * New MIDI and FATAR SCanCores (see above)
 * New "AUX Pot" Routing (was TONE pot analog input enable), TONE pot input may be routed to MASTER VOLUME or TONE function by HX3 Remote Parameter 492
+* Drawbar 9 MPX switching signals for mk2/mk3 boards provided on pin 6 and 7 of PL5 (see our wiki pages)
 
 <b>04/26/2016</b> Firmware #3.924, HX3 Flash #3.9e
 
