@@ -18,7 +18,7 @@ package.
 
 ### Changelog
 
-<b>09/27/2016</b> Firmware #4.1, FPGA #25092016
+<b>09/27/2016</b> Firmware #4.1, FPGA #25092016 (both in Remote_for_all.zip)
 
 * New Chorus Vibrato Routing, new parameters in menu and HX3 Remote:
 * Scanner Gears: Vibrato modulation frequency
