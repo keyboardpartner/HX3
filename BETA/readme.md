@@ -20,7 +20,9 @@ package.
 
 <b>09/27/2016</b> Firmware #4.1, FPGA #25092016 (both in Remote_for_all.zip)
 
-* New Chorus Vibrato Routing, new parameters in menu and HX3 Remote:
+Firmware 4.1 has a new chorus/vibrato routing, adding new parameters in menu and HX3 Remote. Only use with FPGA #25092016. 
+New params are:
+
 * Scanner Gears: Vibrato modulation frequency
 * Scanner Leak: Leakage of unmodulated signal on V1/V2/V3
 * VibCh AmplMod: Modulation of upper frequency limit of LC linebox
