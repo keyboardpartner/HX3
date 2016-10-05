@@ -20,33 +20,4 @@ package.
 
 <b>09/27/2016</b> Firmware #4.1c, FPGA #25092016 (both in Remote_for_all.zip)
 
-Firmware 4.1c has a new chorus/vibrato routing, adding new parameters in menu 
-and HX3 Remote. Only use with FPGA #25092016. New params are:
-
-* Scanner Gears: Vibrato modulation frequency
-* Scanner Leak: Leakage of unmodulated signal on V1/V2/V3
-* VibCh AmplMod: Modulation of upper frequency limit of LC linebox
-* VibCh Preemphasis: Treble enhancement on Vib/Ch
-* VibCh Reflect: Reflections on LC linebox due to aged capacitors
-* VibCh Response: upper frequency limit of LC linebox
-* Ch LineboxLvl: Vibrato mix on Chorus C1/C2/C3
-* Ch BypassLvl: Dry mix on Chorus C1/C2/C3
-* V1 ModAmount: Modulation depth on V1
-* ...
-* C3 ModAmount: Modulation depth on C3
-* Adjustable busbar levels for each drawbar
-
-Note: Some advanced parameters are available by HX3 Remote and PREMIUM version 
-only. These menu items are visible in menu system, but locked in normal version. 
-Obtain a PREMIUM organ licence to make them accessible by menu panel.
-
-
-
-<b>06/27/2016</b> FATAR ScanCore #25, MIDI ScanCore #30
-
-* Added separate update package for FATAR/MIDI, will update ScanCore only
-* Changed MIDI velocity scaling to triple squared curve in FATAR ScanCore 
-* "Missing notes" bug in FATAR ScanCore fixed
-* New MIDI ScanCore #30 with 88 key support, full transpose 24 notes, upper manual split +1 and +2 octaves on lower part
-
 (moved finalized files to LATEST directory)
