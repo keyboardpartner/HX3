@@ -39,7 +39,7 @@ details on update procedure. Scroll to bottom of page for file usage.
 ### Last Build
 
 * HX3 Remote: #4.10  .exe for Windows XP and up
-* HX3 Flash: #3.925g   .exe for Windows XP and up
+* HX3 Flash: #4.10   .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
 * AVR:  #4.10c      .hex and .eep files, latest firmware for AVR controller
 * FPGA: #25092016   .bit configuration file for FPGA update
@@ -47,9 +47,9 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 ### Changelog
 
-<b>09/27/2016</b> Firmware #4.1c, FPGA #25092016 (both in Remote_for_all.zip)
+<b>09/27/2016</b> Firmware #4.11, FPGA #10102016
 
-Firmware 4.1c has a new chorus/vibrato routing, adding new parameters in menu 
+Firmware 4.11 has a new chorus/vibrato routing, adding new parameters in menu 
 and HX3 Remote. Only use with FPGA #25092016. New params are:
 
 * Scanner Gears: Vibrato modulation frequency
@@ -64,6 +64,7 @@ and HX3 Remote. Only use with FPGA #25092016. New params are:
 * ...
 * C3 ModAmount: Modulation depth on C3
 * Adjustable busbar levels for each drawbar
+* Fixed small bug: Preset/drawbar set change on lower will no longer interfere with swell volume
 
 Note: Some advanced parameters are available by HX3 Remote and PREMIUM version 
 only. These menu items are visible in menu system, but locked in normal version. 
