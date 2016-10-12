@@ -49,11 +49,10 @@ details on update procedure. Scroll to bottom of page for file usage.
 <b>10/11/2016</b> Firmware #4.11, FPGA #10102016
 
 Only use with FPGA 10102016 due to new parameter handling. 
-<b>To do</b> in FATAR ScanCore: "George Fleury" mode for note triggering on second FATAR contact, 
-"Korthals" mode for sending MIDI without velocity on first contact.
 
-* Fixed small bug: Preset (drawbar set) change on lower will no longer interfere with swell volume
-* Vibrato channel volume raised a bit
+* Fixed small bugs: Preset (drawbar set) change on lower will no longer interfere with swell volume,
+split point and split mode will be restored after Common Preset changed back to "live"
+* Vibrato channel volume raised a bit, may require readjustment of V/C params
 * Generator impedance revised, will produce more "crisp" attack when playing staccato chords
 
 <b>09/27/2016</b> Firmware #4.10, FPGA #25092016
