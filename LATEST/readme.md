@@ -18,7 +18,7 @@ For example, if you own a **HX3 MIDI Expander Plexi**, download
 It countains the new <b>HX3 Flash utility</b> which will run a complete update free of doubt. 
 See wiki page **[HX3_Update_Application] (http://wiki.keyboardpartner.de/index.php?title=HX3_Update_Application)** for description. Following update packages are available:
 
-### Firmware #3.923 Update Packages
+### Firmware #4.11 Update Packages
 
 * **[Flash_DrawbarExpander.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_DrawbarExpander.zip?raw=true)** - for new HX3 DrawbarExpander
 * **[Flash_ExpanderPlexi_mk2.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_ExpanderPlexi_mk2.zip?raw=true)** - for HX3 MIDI Expander Plexi, older mk2 version (up to 1/2014)
@@ -38,18 +38,28 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 ### Last Build
 
-* HX3 Remote: #4.10  .exe for Windows XP and up
-* HX3 Flash: #4.10   .exe for Windows XP and up
+* HX3 Remote: #4.11 .exe for Windows XP and up
+* HX3 Flash: #4.11  .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
-* AVR:  #4.10c      .hex and .eep files, latest firmware for AVR controller
+* AVR:  #4.11       .hex and .eep files, latest firmware for AVR controller
 * FPGA: #25092016   .bit configuration file for FPGA update
 * SCAN: #25/#30     .dat ScanCore files for MIDI and FATAR
 
 ### Changelog
 
-<b>09/27/2016</b> Firmware #4.11, FPGA #10102016
+<b>10/11/2016</b> Firmware #4.11, FPGA #10102016
 
-Firmware 4.11 has a new chorus/vibrato routing, adding new parameters in menu 
+Only use with FPGA 10102016 due to new parameter handling. 
+<b>To do</b> in FATAR ScanCore: "George Fleury" mode for note trigging on second FATAR contact, 
+"Korthals" mode for sending MIDI without velocity on first contact.
+
+* Fixed small bug: Preset (drawbar set) change on lower will no longer interfere with swell volume
+* Vibrato channel volume raised a bit
+* Generator impedance revised, will produce more "crisp" attack when playing staccato chords
+
+<b>09/27/2016</b> Firmware #4.10, FPGA #25092016
+
+Firmware 4.10 has a new chorus/vibrato routing, adding new parameters in menu 
 and HX3 Remote. Only use with FPGA #25092016. New params are:
 
 * Scanner Gears: Vibrato modulation frequency
@@ -64,12 +74,10 @@ and HX3 Remote. Only use with FPGA #25092016. New params are:
 * ...
 * C3 ModAmount: Modulation depth on C3
 * Adjustable busbar levels for each drawbar
-* Fixed small bug: Preset/drawbar set change on lower will no longer interfere with swell volume
 
 Note: Some advanced parameters are available by HX3 Remote and PREMIUM version 
 only. These menu items are visible in menu system, but locked in normal version. 
 Obtain a PREMIUM organ licence to make them accessible by menu panel.
-
 
 <b>06/27/2016</b> FATAR ScanCore #25, MIDI ScanCore #30
 
