@@ -12,7 +12,7 @@ package.
 * HX3 Remote: #4.11  .exe for Windows XP and up
 * HX3 Flash: #3.925g   .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
-* AVR:  #4.11      .hex and .eep files, latest firmware for AVR controller
+* AVR:  #4.20      .hex and .eep files, latest firmware for AVR controller
 * FPGA: #10102016   .bit configuration file for FPGA update
 * SCAN: #30         .dat ScanCore files for MIDI and FATAR
 
