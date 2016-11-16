@@ -37,8 +37,8 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 ### Last Build
 
-* HX3 Remote: #4.11 .exe for Windows XP and up
-* HX3 Flash: #4.11  .exe for Windows XP and up
+* HX3 Remote: #4.21 .exe for Windows XP and up
+* HX3 Flash: #4.21  .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
 * AVR:  #4.21       .hex and .eep files, latest firmware for AVR controller
 * FPGA: #26102016   .bit configuration file for FPGA update
