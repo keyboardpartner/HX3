@@ -40,11 +40,24 @@ details on update procedure. Scroll to bottom of page for file usage.
 * HX3 Remote: #4.11 .exe for Windows XP and up
 * HX3 Flash: #4.11  .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
-* AVR:  #4.11       .hex and .eep files, latest firmware for AVR controller
-* FPGA: #25092016   .bit configuration file for FPGA update
-* SCAN: #25/#30     .dat ScanCore files for MIDI and FATAR
+* AVR:  #4.21       .hex and .eep files, latest firmware for AVR controller
+* FPGA: #26102016   .bit configuration file for FPGA update
+* SCAN: #25/#30     .dat ScanCore files
 
 ### Changelog
+
+<b>10/28/2016</b> Firmware #4.21, FPGA #26102016
+
+*  New menu "ContEarlyActn" and HX3 Remote Parameter 491, Contact Early Action ON/OFF on FATAR keybeds:
+ * If set to ON, organ will close key contacts on 1st FATAR rubber contact and send MIDI ON immediately, but without velocity.
+ * If set to OFF ("George Fleury" mode), organ will close key contacts on 2nd FATAR rubber contact and send MIDI ON with velocity.
+*  New menu "TG Gears Tune" and HX3 Remote Parameter 488, TG Tuning will fine tune the organ plusminus 100 cent. 
+Note: To accomplish this, all TG gears must be changed which may take around 100 ms.
+* Audio output config initialisation bug fixed
+* "Flickering display on startup" bug fixed
+* On organs with 2 DB sets, changes to presets will always be made by right set of DBs (was random before)
+* Deleted "Expander Mode" parameter for organ firmwares
+* Fixed Common Presets "Live" bug
 
 <b>10/11/2016</b> Firmware #4.11, FPGA #10102016
 
