@@ -18,19 +18,5 @@ package.
 
 ### Changelog
 
-<b>10/28/2016</b> Firmware #4.20, FPGA #26102016 (both in Remote_for_all.zip)
-
-*  New menu "ContEarlyActn" and HX3 Remote Parameter 491, Contact Early Action ON/OFF:
- * If set to ON, organ will close key contacts on 1st FATAR rubber contact and send MIDI ON immediately, but without velocity.
- * If set to OFF ("George Fleury" mode), organ will close key contacts on 2nd FATAR rubber contact and send MIDI ON with velocity.
-*  New menu "TG Gears Tune" and HX3 Remote Parameter 488, TG Tuning will fine tune the organ plusminus 100 cent. 
-Note: To accomplish this, all TG gears must be changed which may take around 100 ms.
-* Audio output config initialisation bug fixed
-* "Flickering display on startup" bug fixed
-* On organs with 2 DB sets, changes to presets will always be made by right set of DBs (was random before)
-* Deleted "Expander Mode" parameter for organ firmwares
-
-
-<b>09/27/2016</b> Firmware #4.1c, FPGA #25092016 (both in Remote_for_all.zip)
 
 (moved finalized files to LATEST directory)
