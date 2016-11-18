@@ -46,7 +46,7 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 ### Changelog
 
-<b>10/28/2016</b> Firmware #4.21, FPGA #26102016
+<b>11/18/2016</b> Firmware #4.21, FPGA #26102016
 
 *  New menu "ContEarlyActn" and HX3 Remote Parameter 491, Contact Early Action ON/OFF on FATAR keybeds:
  * If set to ON, organ will close key contacts on 1st FATAR rubber contact and send MIDI ON immediately, but without velocity.
@@ -58,6 +58,7 @@ Note: To accomplish this, all TG gears must be changed which may take around 100
 * On organs with 2 DB sets, changes to presets will always be made by right set of DBs (was random before)
 * Deleted "Expander Mode" parameter for organ firmwares
 * Fixed Common Presets "Live" bug
+* Fixed Defaults loading bug (silent update from 11/18/2016)
 
 <b>10/11/2016</b> Firmware #4.11, FPGA #10102016
 
