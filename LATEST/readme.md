@@ -18,7 +18,7 @@ For example, if you own a **HX3 MIDI Expander Plexi**, download
 It countains the new <b>HX3 Flash utility</b> which will run a complete update free of doubt. 
 See wiki page **[HX3_Update_Application] (http://wiki.keyboardpartner.de/index.php?title=HX3_Update_Application)** for description. Following update packages are available:
 
-### Firmware #4.11 Update Packages
+### Firmware #4.21 Update Packages
 
 * **[Flash_DrawbarExpander.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_DrawbarExpander.zip?raw=true)** - for new HX3 DrawbarExpander
 * **[Flash_ExpanderPlexi_mk2.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_ExpanderPlexi_mk2.zip?raw=true)** - for HX3 MIDI Expander Plexi, older mk2 version (up to 1/2014)
