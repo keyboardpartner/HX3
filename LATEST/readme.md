@@ -51,6 +51,7 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 * Returned to FPGA_10102016 as found in FW 4.11 **without** "TG Gears Tune" tuning option. Tuning ability sacfrified somewhat of sound quality. If you need tuning capability, please use firmware 4.21 with FPGA_26102016.
 * Fixed "Split Havoc" bug when changing parameters while playing with split on
+* Fixed Master Volume display bug (wrong menu item displayed when changing)
 
 <b>11/18/2016</b> Firmware #4.21, FPGA #26102016
 
