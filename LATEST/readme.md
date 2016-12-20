@@ -27,6 +27,7 @@ See wiki page **[HX3_Update_Application] (http://wiki.keyboardpartner.de/index.p
 
 <b>Please note:</b> Standard organ installations will only install default paramaters. 
 Please use HX3 Remote (contained in complete firmware package) to setup parameters for your particular application.
+Older firmwares may be found on **[ARCHIVED_FIRMW] (https://github.com/keyboardpartner/HX3/tree/master/ARCHIVED_FIRMW)** page.
 
 
 ### Update Packages for OEM/Developers/Technicians/Advanced Users
@@ -48,7 +49,7 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 <b>12/20/2016</b> Firmware #4.22, FPGA #10102016
 
-* Returned to FPGA_10102016 as found in FW 4.11 <b>without</b> "TG Gears Tune" tuning option. Tuning ability sacfrified somewhat of sound quality. If you need tuning capability, please use firmware 4.21 with FPGA_26102016.
+* Returned to FPGA_10102016 as found in FW 4.11 **without** "TG Gears Tune" tuning option. Tuning ability sacfrified somewhat of sound quality. If you need tuning capability, please use firmware 4.21 with FPGA_26102016.
 * Fixed "Split Havoc" bug when changing parameters while playing with split on
 
 <b>11/18/2016</b> Firmware #4.21, FPGA #26102016
