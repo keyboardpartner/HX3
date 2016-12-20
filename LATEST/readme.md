@@ -18,7 +18,7 @@ For example, if you own a **HX3 MIDI Expander Plexi**, download
 It countains the new <b>HX3 Flash utility</b> which will run a complete update free of doubt. 
 See wiki page **[HX3_Update_Application] (http://wiki.keyboardpartner.de/index.php?title=HX3_Update_Application)** for description. Following update packages are available:
 
-### Firmware #4.21 Update Packages
+### Firmware #4.22 Update Packages
 
 * **[Flash_DrawbarExpander.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_DrawbarExpander.zip?raw=true)** - for new HX3 DrawbarExpander
 * **[Flash_ExpanderPlexi_mk2.zip] (https://github.com/keyboardpartner/HX3/blob/master/LATEST/Flash_ExpanderPlexi_mk2.zip?raw=true)** - for HX3 MIDI Expander Plexi, older mk2 version (up to 1/2014)
@@ -37,14 +37,19 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 ### Last Build
 
-* HX3 Remote: #4.21 .exe for Windows XP and up
-* HX3 Flash: #4.21  .exe for Windows XP and up
+* HX3 Remote: #4.22 .exe for Windows XP and up
+* HX3 Flash: #4.22  .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
-* AVR:  #4.21       .hex and .eep files, latest firmware for AVR controller
-* FPGA: #26102016   .bit configuration file for FPGA update
+* AVR:  #4.22       .hex and .eep files, latest firmware for AVR controller
+* FPGA: #10102016   .bit configuration file for FPGA update
 * SCAN: #25/#30     .dat ScanCore files
 
 ### Changelog
+
+<b>12/20/2016</b> Firmware #4.22, FPGA #10102016
+
+* Returned to FPGA_10102016 as found in FW 4.11 <b>without</b> "TG Gears Tune" tuning option. Tuning ability sacfrified somewhat of sound quality. If you need tuning capability, please use firmware 4.21 with FPGA_26102016.
+* Fixed "Split Havoc" bug when changing parameters while playing with split on
 
 <b>11/18/2016</b> Firmware #4.21, FPGA #26102016
 
@@ -59,6 +64,7 @@ Note: To accomplish this, all TG gears must be changed which may take around 100
 * Deleted "Expander Mode" parameter for organ firmwares
 * Fixed Common Presets "Live" bug
 * Fixed Defaults loading bug (silent update from 11/18/2016)
+
 
 <b>10/11/2016</b> Firmware #4.11, FPGA #10102016
 
