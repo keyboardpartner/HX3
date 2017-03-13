@@ -18,6 +18,7 @@ package.
 
 ### Changelog
 
+03/13/2017 FatarScan #31, improved key velocity on MIDI out
 03/11/2017 FatarScan #31, improved click evaluation
 
 (moved finalized files to LATEST directory)
