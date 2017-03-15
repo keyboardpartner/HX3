@@ -43,9 +43,15 @@ details on update procedure. Scroll to bottom of page for file usage.
 * HX3 Tapering	    .exe for Windows XP and up
 * AVR:  #4.22       .hex and .eep files, latest firmware for AVR controller
 * FPGA: #10102016   .bit configuration file for FPGA update
-* SCAN: #25/#30     .dat ScanCore files
+* SCAN: #25/#32     .dat ScanCore files
 
 ### Changelog
+
+<b>03/15/2017</b> Fatar ScanCore #32
+
+* DO NOT USE PRELIMINARY #31!
+* improved key velocity on MIDI out
+* improved click evaluation
 
 <b>12/20/2016</b> Firmware #4.22, FPGA #10102016
 
