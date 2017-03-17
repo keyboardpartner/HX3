@@ -47,9 +47,10 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 ### Changelog
 
-<b>03/15/2017</b> Fatar ScanCore #32
+<b>03/17/2017</b> Fatar ScanCore #32
 
-* DO NOT USE PRELIMINARY #31!
+* DO NOT USE PRELIMINARY #31 or #32 from 03/15/2017!
+* MIDI bugfix
 * improved key velocity on MIDI out
 * improved click evaluation
 
