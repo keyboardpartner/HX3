@@ -53,6 +53,7 @@ details on update procedure. Scroll to bottom of page for file usage.
 * MIDI bugfix
 * improved key velocity on MIDI out
 * improved click evaluation
+* Typo in config.ini, displayed #32 instead of #32
 
 <b>12/20/2016</b> Firmware #4.22, FPGA #10102016
 
