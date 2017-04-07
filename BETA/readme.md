@@ -40,8 +40,8 @@ bottle whoosh" (can't describe it better) on each note.
 
 * Hardware inputs on PL16 for Sostenuto/Sustain pedal connection
 * Sostenuto working with MIDI #64 and hardware inputs
-* improved key velocity on MIDI out, FatarScan #33
-* improved click evaluation
+* Improved key velocity on MIDI out, FatarScan #33
+* Improved click evaluation
 
 Otherwise empty PL16 on mainboard was only used to output an auxiliary
 MIDI signal for Neo Ventilator speed control on pin 7 and some internal
@@ -53,6 +53,8 @@ manual. An additional 10-pin header is needed, solder in PL16 position.
 If you don't need separate sutain/sostenuto inputs for upper and lower
 manuals, just connect both inputs for each function, i.e. 4 and 6 for
 sustain and 3 and 5 for sostenuto. Do not bridge all 4 inputs.
+
+NOTE: Hardware input pins only work with FPGA #03042017 and up.
 
 Both are controllable by MIDI CC #64 also (wired by "MIDI CC set" menu
 to either sustain or sostenuto). These functions work even on splitted
