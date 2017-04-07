@@ -18,10 +18,30 @@ package.
 
 ### Changelog
 
-03/13/2017 FatarScan #33
+<b>12/20/2016</b> Firmware #4.25, FPGA #03042017
+
+* Glitches in filter assignment and leakage generation fixed
+* internal signal processing 18 bits wide (was 16)
+* Tuning capability, parameter "TG Gears Tune" on display, A = 433 to 447 Hz
+* phase and amplitude noise/leakage improved
+* Sustain/sostenuto hardware inputs on MIDI and FatarScan Core, see below
+* Sostenuto CC #64 works also on FatarScan if enabled by MIDI CC menu
+* Lowered distortion on TG notes 48 and up, less interference
+
+Completely revised my old generator design, dating from 2012. There might have been a 
+glitch in my old code that assigned wrong LC filter numbers (i.e. their 
+simulation) to some generator notes, so some notes were to weak or too loud even 
+with "new" tapering. New generator has a smooth response with "new caps" 
+selected in menu. Please revise your own tapering files if needed. Also FM/phase 
+noise revised, may need readjustment of TG Flutter param to get that "blowing a 
+bottle whoosh" (can't describe it better) on each note.
+
+<b>03/13/2017</b> FatarScan #33
 
 * Hardware inputs on PL16 for Sostenuto/Sustain pedal connection
 * Sostenuto working with MIDI #64 and hardware inputs
+* improved key velocity on MIDI out, FatarScan #33
+* improved click evaluation
 
 Otherwise empty PL16 on mainboard was only used to output an auxiliary
 MIDI signal for Neo Ventilator speed control on pin 7 and some internal
@@ -39,10 +59,5 @@ to either sustain or sostenuto). These functions work even on splitted
 manuals, so if you have lower on left part of manual, pin 3 affects only
 sostenuto on left side. I think this should fit all needs.
 
-03/13/2017 FatarScan #32
-
-* DO NOT USE #31!
-* improved key velocity on MIDI out
-* improved click evaluation
 
 (moved finalized files to LATEST directory)
