@@ -47,6 +47,11 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 ### Changelog
 
+<b>04/15/2016</b> Firmware #4.25, FPGA #10042017
+
+* ARGHH! Rotary Sim volume permanently set to 0. Bug fixed. No new version number.
+* DO NOT USE ZIPs from 04/14/2017!
+
 <b>04/14/2016</b> Firmware #4.25, FPGA #10042017
 
 * Glitches in filter assignment and leakage generation fixed
