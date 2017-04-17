@@ -42,14 +42,15 @@ details on update procedure. Scroll to bottom of page for file usage.
 * HX3 Flash: #4.22  .exe for Windows XP and up
 * HX3 Tapering	    .exe for Windows XP and up
 * AVR:  #4.25      .hex and .eep files, latest firmware for AVR controller
-* FPGA: #10042017   .bit configuration file for FPGA update
+* FPGA: #17042017   .bit configuration file for FPGA update
 * SCAN: #33         .dat ScanCore files for MIDI and FATAR
 
 ### Changelog
 
-<b>04/15/2016</b> Firmware #4.25, FPGA #10042017
+<b>04/17/2016</b> Firmware #4.25, FPGA #17042017
 
 * ARGHH! Rotary Sim volume permanently set to 0. Bug fixed. No new version number.
+* Slightly changed FPGA 17042017 to match TG Flutter setting of previous versions
 * DO NOT USE ZIPs from 04/14/2017!
 
 <b>04/14/2016</b> Firmware #4.25, FPGA #10042017
