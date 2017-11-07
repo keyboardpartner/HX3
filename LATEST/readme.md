@@ -47,13 +47,17 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 ### Changelog
 
-<b>04/17/2016</b> Firmware #4.25, FPGA #17042017
+<b>11/05/2017</b> ScanCore #24 for SR44,SR49 and SR61
+
+* "Last note on Lower distorted" bug fixed for ScanStrip16 and ScanInline61 boards
+
+<b>04/17/2017</b> Firmware #4.25, FPGA #17042017
 
 * ARGHH! Rotary Sim volume permanently set to 0. Bug fixed. No new version number.
 * Slightly changed FPGA 17042017 to match TG Flutter setting of previous versions
 * DO NOT USE ZIPs from 04/14/2017!
 
-<b>04/14/2016</b> Firmware #4.25, FPGA #10042017
+<b>04/14/2017</b> Firmware #4.25, FPGA #10042017
 
 * Glitches in filter assignment and leakage generation fixed
 * internal signal processing with more headroom
