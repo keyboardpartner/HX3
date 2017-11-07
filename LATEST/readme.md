@@ -47,9 +47,11 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 ### Changelog
 
-<b>11/05/2017</b> ScanCore #24 for SR44,SR49 and SR61
+<b>11/05/2017</b> ScanCore #24 for SR44, SR49 and SR61
 
-* "Last note on Lower distorted" bug fixed for ScanStrip16 and ScanInline61 boards
+* "Last note on lower manual distorted" bug fixed for ScanStrip16 and ScanInline61 boards
+* Silent Update for Expander/Drawbar Expander mk3/4 Firmware (no new version number): 
+* Will accept MIDI CCs for swell and volume on all 3 channels now
 
 <b>04/17/2017</b> Firmware #4.25, FPGA #17042017
 
