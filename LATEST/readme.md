@@ -47,6 +47,10 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 ### Changelog
 
+<b>02/07/2018</b> Firmware 4.25 for XB-2 mk3/mk4
+
+* Updated firmware in folder Flash_XB2_mk3 to lates version
+
 <b>11/05/2017</b> ScanCore #24 for SR44, SR49 and SR61
 
 * "Last note on lower manual distorted" bug fixed for ScanStrip16 and ScanInline61 boards
