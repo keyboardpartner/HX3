@@ -50,11 +50,13 @@ details on update procedure. Scroll to bottom of page for file usage.
 <b>02/07/2018</b> Firmware 4.25 for XB-2 mk3/mk4, FPGA #25042017
 
 * Updated firmware in folder Flash_XB2_mk3 to latest version 
-* Problems with secondary MIDI input: Newer FPGAs seem to have stronger internal 
-pull-up resistors, so second MIDI input (often used for bass pedals or drawbar 
-controller) may not work properly. Please update to FPGA #25042017 ig you 
+* Problems with secondary MIDI input: Newer FPGAs seem to have stronger internal pull-up 
+resistors, so second MIDI input (often used for bass pedals or drawbar 
+controller) may not work properly. Please update to FPGA #25042017 if you 
 experience this issue. Do not use FPGA #25042017 on older mk2 boards (#24042017 
-is OK).
+is OK). 
+* Small changes to HX3 Remote to fit small screens (notebook etc.), 
+"moved folder" bugfix (resets file info when path to parameter files does no longer exist)
 
 <b>11/05/2017</b> ScanCore #24 for SR44, SR49 and SR61
 
