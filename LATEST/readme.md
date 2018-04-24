@@ -47,6 +47,11 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 ### Changelog
 
+<b>04/24/2018</b> ScanCore #23 for XB-2 mk3/4 Kit
+
+* Corrected behaviour fast key = long click, slow key = short click
+* Audible key off noise when Contact Damping param > 7
+
 <b>02/07/2018</b> Firmware 4.25 for XB-2 mk3/mk4, FPGA #25042017
 
 * Updated firmware in folder Flash_XB2_mk3 to latest version 
