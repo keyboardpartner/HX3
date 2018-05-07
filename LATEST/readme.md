@@ -47,7 +47,7 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 ### Changelog
 
-<b>03/17/2017</b> ScanCore for Fatar #35
+<b>05/26/2018</b> ScanCore for Fatar #35
 
 * Sustain/Sostenuto hardware switches on PL16, switch to ground
 * MIDI CCs for Sustain/Sostenuto sent on separate channels
