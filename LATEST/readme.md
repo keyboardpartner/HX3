@@ -47,6 +47,16 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 ### Changelog
 
+<b>03/17/2017</b> ScanCore for Fatar #35
+
+* Sustain/Sostenuto hardware switches on PL16, switch to ground
+* MIDI CCs for Sustain/Sostenuto sent on separate channels
+* MIDI Cancel inputs PL 16 Pin 1 (upper) and 2 (lower)
+* Sustain inputs PL 16 Pin 4 (lower) and Pin 6 (upper)
+* Sostenuto inputs PL 16 Pin 3 (lower) and Pin 5 (upper)
+* Corrected behaviour fast key = long click, slow key = short click
+
+
 <b>04/24/2018</b> ScanCore #23 for XB-2 mk3/4 Kit
 
 * Corrected behaviour fast key = long click, slow key = short click
