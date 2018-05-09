@@ -47,6 +47,21 @@ details on update procedure. Scroll to bottom of page for file usage.
 
 ### Changelog
 
+<b>05/26/2018</b> ScanCore for Fatar #35
+
+* Sustain/Sostenuto hardware switches on PL16, switch to ground
+* MIDI CCs for Sustain/Sostenuto sent on separate channels
+* MIDI Cancel inputs PL 16 Pin 1 (upper) and 2 (lower)
+* Sustain inputs PL 16 Pin 4 (lower) and Pin 6 (upper)
+* Sostenuto inputs PL 16 Pin 3 (lower) and Pin 5 (upper)
+* Corrected behaviour fast key = long click, slow key = short click
+
+
+<b>04/24/2018</b> ScanCore #23 for XB-2 mk3/4 Kit
+
+* Corrected behaviour fast key = long click, slow key = short click
+* Audible key off noise when Contact Damping param > 7
+
 <b>02/07/2018</b> Firmware 4.25 for XB-2 mk3/mk4, FPGA #25042017
 
 * Updated firmware in folder Flash_XB2_mk3 to latest version 
