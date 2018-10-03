@@ -43,9 +43,13 @@ details on update procedure. Scroll to bottom of page for file usage.
 * HX3 Tapering	    .exe for Windows XP and up
 * AVR:  #4.25      .hex and .eep files, latest firmware for AVR controller
 * FPGA: #25042017   .bit configuration file for FPGA update
-* SCAN: #33         .dat ScanCore files for MIDI and FATAR
+* SCAN: #35         .dat ScanCore files for MIDI and FATAR
 
 ### Changelog
+
+<b>10/03/2018</b> FW #4.026 for XB-2 mk3/4 Kit
+
+* Bass Pedal drawbar update fixed (XB-2 only)
 
 <b>05/26/2018</b> ScanCore for Fatar #35
 
